@@ -33,9 +33,42 @@ export const projects: Project[] = [
         "Clasificación automática",
         "API REST",
         "Clasificación automática de estudiantes",
-        "Arquitectura desacoplada",
         "Integración Flutter + Spring Boot + Flask",
         "Persistencia de datos en PostgreSQL",
     ],
+
+    stack: [
+        {
+            category: "Frontend",
+            technology: "Flutter",
+        },
+        {
+            category: "Backend",
+            technology: "Spring Boot",
+        },
+        {
+            category: "Machine Learning",
+            technology: "Flask",
+        },
+        {
+            category: "Database",
+            technology: "PostgreSQL",
+        },
+        {
+            category: "DevOps",
+            technology: "Docker",
+        },
+    ],
+
+    github:
+        "https://github.com/tuusuario/sistema-ansiedad",
+
+    demo:
+        "https://demo.com",
+
+    year: "2026",
+
+    status: "Completado",
+        
   },
 ];
