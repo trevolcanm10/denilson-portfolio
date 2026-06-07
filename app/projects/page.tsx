@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { ArchitectureDiagram } from "@/components/project/architecture-diagram";
+import { CaseStudySection } from "@/components/project/case-study-section";
 type Props = {
   params: Promise<{
     slug: string;
@@ -30,32 +31,29 @@ export default async function ProjectPage({
         {project.description}
       </p>
 
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold">
-          Problema
-        </h2>
+      <CaseStudySection title="Problema">
+        <p>{project.problem}</p>
+      </CaseStudySection>
 
-        <p className="mt-4">
-          {project.problem}
-        </p>
-      </section>
+      <CaseStudySection title="Solución">
+        <p>{project.solution}</p>
+      </CaseStudySection>
 
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold">
-          Solución
-        </h2>
-
-        <p className="mt-4">
-          {project.solution}
-        </p>
-        <h2 className="text-2xl font-bold">
-            Arquitectura
-        </h2>
-
+      <CaseStudySection title="Arquitectura">
         <ArchitectureDiagram
-            architecture={project.architecture}
+          architecture={project.architecture}
         />
-      </section>
+      </CaseStudySection>
+
+      <CaseStudySection title="Resultados">
+        <ul className="space-y-3">
+          {project.results.map((result) => (
+            <li key={result}>
+              ✓ {result}
+            </li>
+          ))}
+        </ul>
+      </CaseStudySection>
     </main>
   );
 }

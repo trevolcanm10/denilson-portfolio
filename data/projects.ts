@@ -32,6 +32,10 @@ export const projects: Project[] = [
         "Arquitectura desacoplada",
         "Clasificación automática",
         "API REST",
+        "Clasificación automática de estudiantes",
+        "Arquitectura desacoplada",
+        "Integración Flutter + Spring Boot + Flask",
+        "Persistencia de datos en PostgreSQL",
     ],
   },
 ];
