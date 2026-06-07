@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu } from "lucide-react";
 
@@ -19,6 +20,13 @@ const navItems = [
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full border-b bg-background/80 backdrop-blur z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -34,7 +42,11 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition"
+              className={`text-sm transition ${
+                isActive(item.href)
+                  ? "text-foreground font-medium"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
               {item.label}
             </Link>
@@ -66,7 +78,11 @@ export function Navbar() {
                       <SheetClose asChild key={item.href}>
                         <Link
                           href={item.href}
-                          className="text-lg font-medium hover:translate-x-1 transition"
+                          className={`text-lg font-medium hover:translate-x-1 transition ${
+                            isActive(item.href)
+                              ? "text-foreground"
+                              : "text-muted-foreground"
+                          }`}
                         >
                           {item.label}
                         </Link>

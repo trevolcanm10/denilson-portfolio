@@ -1,82 +1,62 @@
-interface ProjectHeaderProps {
-  title: string;
-  description: string;
-  technologies: string[];
+import Link from "next/link";
+import { Project } from "@/types/project";
 
-  github?: string;
-  demo?: string;
-
-  year?: string;
-  status?: string;
-}
-
-export function ProjectHeader({
-  title,
-  description,
-  technologies,
-  github,
-  demo,
-  year,
-  status,
-}: ProjectHeaderProps) {
+export function ProjectHeader({ project }: { project: Project }) {
   return (
-    <header className="mb-20">
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-5xl font-bold tracking-tight">
-            {title}
-          </h1>
+    <section className="space-y-8">
 
-          <p className="mt-6 max-w-3xl text-xl text-muted-foreground">
-            {description}
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="
-                rounded-full
-                border
-                px-3
-                py-1
-                text-sm
-              "
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <div className="flex gap-6">
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium underline"
-            >
-              GitHub ↗
-            </a>
-          )}
-
-          {demo && (
-            <a
-              href={demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium underline"
-            >
-              Demo ↗
-            </a>
-          )}
-        </div>
-
-        <div className="text-sm text-muted-foreground">
-          {year} · {status}
-        </div>
+      {/* Top meta */}
+      <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+        <span>{project.year}</span>
+        <span>•</span>
+        <span>{project.status}</span>
       </div>
-    </header>
+
+      {/* Title */}
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        {project.title}
+      </h1>
+
+      {/* Description */}
+      <p className="text-lg text-muted-foreground max-w-2xl">
+        {project.description}
+      </p>
+
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2">
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="flex flex-wrap gap-3 pt-2">
+        {project.github && (
+          <Link
+            href={project.github}
+            target="_blank"
+            className="px-5 py-2 rounded-lg border hover:bg-muted transition"
+          >
+            GitHub
+          </Link>
+        )}
+
+        {project.demo && (
+          <Link
+            href={project.demo}
+            target="_blank"
+            className="px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition"
+          >
+            Ver demo
+          </Link>
+        )}
+      </div>
+
+    </section>
   );
 }

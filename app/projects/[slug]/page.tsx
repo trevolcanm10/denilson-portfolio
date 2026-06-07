@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import { ArchitectureDiagram } from "@/components/project/architecture-diagram";
@@ -6,11 +7,33 @@ import { ProjectHeader } from "@/components/project/project-header";
 import { TechnologyStack } from "@/components/project/technology-stack";
 import { ProjectTimeline } from "@/components/project/project-timeline";
 import { ProjectGallery } from "@/components/project/project-gallery";
+import { CaseSplit } from "@/components/project/case-split";
 type Props = {
   params: Promise<{
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return { title: "Proyecto no encontrado" };
+  }
+
+  return {
+    title: `${project.title} | Denilson Morales`,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      images: [project.cover],
+    },
+  };
+}
 
 export default async function ProjectPage({
   params,
@@ -27,23 +50,12 @@ export default async function ProjectPage({
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-24">
-      <ProjectHeader
-        title={project.title}
-        description={project.description}
-        technologies={project.technologies}
-        github={project.github}
-        demo={project.demo}
-        year={project.year}
-        status={project.status}
+      <ProjectHeader project={project} />
+
+      <CaseSplit
+        problem={project.problem}
+        solution={project.solution}
       />
-
-      <CaseStudySection title="Problema">
-        <p>{project.problem}</p>
-      </CaseStudySection>
-
-      <CaseStudySection title="Solución">
-        <p>{project.solution}</p>
-      </CaseStudySection>
 
       <CaseStudySection title="Proceso de Desarrollo">
         <ProjectTimeline
