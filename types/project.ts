@@ -1,8 +1,15 @@
 export interface Project {
   slug: string;
   title: string;
-  shortDescription: string;
+  description: string;
+
   technologies: string[];
-  github?: string;
-  demo?: string;
+
+  problem: string;
+
+  solution: string;
+
+  architecture: string[];
+
+  results: string[];
 }
