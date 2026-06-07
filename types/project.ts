@@ -7,18 +7,28 @@ export interface Project {
 
   technologies: string[];
 
-  stack: {
-    category: string;
-    technology: string;
-  }[];
-
   problem: string;
 
   solution: string;
 
   architecture: string[];
-
   results: string[];
+
+  stack: {
+    category: string;
+    technology: string;
+  }[];
+
+  timeline: {
+    title: string;
+    description: string;
+  }[];
+  
+  gallery: {
+    image: string;
+    title: string;
+    description: string;
+  }[];
 
   github?: string;
 

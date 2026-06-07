@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/theme-toggle";
 export function Navbar() {
   return (
     <header className="border-b">
@@ -6,11 +7,12 @@ export function Navbar() {
           Denilson Morales
         </h1>
 
-        <div className="flex gap-6">
+        <div className="flex items-center gap-6">
           <a href="/">Inicio</a>
           <a href="/projects">Proyectos</a>
           <a href="/services">Servicios</a>
           <a href="/contact">Contacto</a>
+          <ThemeToggle />
         </div>
       </nav>
     </header>

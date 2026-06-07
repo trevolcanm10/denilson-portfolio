@@ -1,5 +1,7 @@
+"use client";
 import { Project } from "@/types/project";
 import Link from "next/link";
+import { motion } from "framer-motion";
 interface Props {
   project: Project;
 }
@@ -12,7 +14,14 @@ export function ProjectCard({
             href={`/projects/${project.slug}`}
             className="block"
         >
-            <article className="rounded-xl border p-6 transition-all hover:-translate-y-1 hover:shadow-lg">
+            <motion.article
+                whileHover={{
+                    y: -5,
+                }}
+                transition={{
+                    duration: 0.2,
+                }}
+            >
             <h3 className="text-xl font-bold">
                 {project.title}
             </h3>
@@ -31,7 +40,7 @@ export function ProjectCard({
                 </span>
                 ))}
             </div>
-            </article>
+            </motion.article>
         </Link>
     );
 }

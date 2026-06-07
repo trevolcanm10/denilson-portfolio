@@ -4,6 +4,8 @@ import { ArchitectureDiagram } from "@/components/project/architecture-diagram";
 import { CaseStudySection } from "@/components/project/case-study-section";
 import { ProjectHeader } from "@/components/project/project-header";
 import { TechnologyStack } from "@/components/project/technology-stack";
+import { ProjectTimeline } from "@/components/project/project-timeline";
+import { ProjectGallery } from "@/components/project/project-gallery";
 type Props = {
   params: Promise<{
     slug: string;
@@ -43,9 +45,21 @@ export default async function ProjectPage({
         <p>{project.solution}</p>
       </CaseStudySection>
 
+      <CaseStudySection title="Proceso de Desarrollo">
+        <ProjectTimeline
+          timeline={project.timeline}
+        />
+      </CaseStudySection>
+
       <CaseStudySection title="Arquitectura">
         <ArchitectureDiagram
           architecture={project.architecture}
+        />
+      </CaseStudySection>
+      
+      <CaseStudySection title="Galería">
+        <ProjectGallery
+          images={project.gallery}
         />
       </CaseStudySection>
 

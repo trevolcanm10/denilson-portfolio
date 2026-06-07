@@ -60,6 +60,54 @@ export const projects: Project[] = [
         },
     ],
 
+    timeline: [
+        {
+            title: "Recolección de Datos",
+            description:
+            "Obtención y análisis de información para entrenar el modelo.",
+        },
+        {
+            title: "Preprocesamiento",
+            description:
+            "Limpieza, transformación y preparación de los datos.",
+        },
+        {
+            title: "Entrenamiento del Modelo",
+            description:
+            "Construcción y evaluación del modelo de Machine Learning.",
+        },
+        {
+            title: "Desarrollo de la Aplicación",
+            description:
+            "Implementación de Flutter, Spring Boot y Flask.",
+        },
+        {
+            title: "Despliegue",
+            description:
+            "Contenerización y puesta en marcha con Docker.",
+        },
+    ],
+
+    gallery: [
+        {
+            image: "/projects/ansiedad/login.png",
+            title: "Pantalla de Inicio",
+            description:
+            "Autenticación de usuarios.",
+        },
+        {
+            image: "/projects/ansiedad/dashboard.png",
+            title: "Dashboard",
+            description:
+            "Visualización de métricas.",
+        },
+        {
+            image: "/projects/ansiedad/prediccion.png",
+            title: "Predicción",
+            description:
+            "Resultado generado por ML.",
+        },
+    ],
     github:
         "https://github.com/tuusuario/sistema-ansiedad",
 
