@@ -1,21 +1,58 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
 
 export function Skills() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
-      <h2 className="mb-8 text-3xl font-bold">
-        Tecnologías
-      </h2>
+    <section className="py-20 px-4">
+      <div className="max-w-6xl mx-auto space-y-12">
 
-      <div className="flex flex-wrap gap-3">
-        {skills.map((skill) => (
-          <div
-            key={skill}
-            className="rounded-lg border px-4 py-2"
-          >
-            {skill}
-          </div>
-        ))}
+        {/* Title */}
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl font-bold">Tecnologías</h2>
+          <p className="text-muted-foreground">
+            Herramientas y tecnologías que uso para construir soluciones
+          </p>
+        </div>
+
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skills.map((skill, index) => {
+            const Icon = skill.icon;
+
+            return (
+              <motion.div
+                key={skill.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-5 rounded-xl border bg-background/60 backdrop-blur hover:shadow-md transition group"
+              >
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="w-5 h-5 text-primary" />
+                  <h3 className="font-semibold group-hover:text-primary transition">
+                    {skill.category}
+                  </h3>
+                </div>
+
+                {/* Items */}
+                <div className="flex flex-wrap gap-2">
+                  {skill.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

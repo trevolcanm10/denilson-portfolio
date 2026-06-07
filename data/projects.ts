@@ -88,6 +88,8 @@ export const projects: Project[] = [
         },
     ],
 
+    cover: "/projects/ansiedad/dashboard.png",
+    
     gallery: [
         {
             image: "/projects/ansiedad/login.png",

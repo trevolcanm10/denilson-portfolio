@@ -2,6 +2,7 @@
 import { Project } from "@/types/project";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 interface Props {
   project: Project;
 }
@@ -22,6 +23,15 @@ export function ProjectCard({
                     duration: 0.2,
                 }}
             >
+
+            <div className="relative aspect-video overflow-hidden rounded-xl mb-4">
+                <Image
+                    src={project.cover}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    />
+            </div>
             <h3 className="text-xl font-bold">
                 {project.title}
             </h3>

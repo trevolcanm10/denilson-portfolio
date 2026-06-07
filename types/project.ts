@@ -37,5 +37,7 @@ export interface Project {
   year?: string;
 
   status?: string;
+
+  cover: string;
   
 }
