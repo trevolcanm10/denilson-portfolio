@@ -14,8 +14,41 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Denilson Morales",
-  description: "Software Engineer Portfolio",
+  title: {
+    default: "Denilson Morales | Full Stack & AI Developer",
+    template: "%s | Denilson Morales",
+  },
+  description:
+    "Portfolio de Denilson Morales - Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial. Web, móvil y Machine Learning.",
+  keywords: [
+    "Denilson Morales",
+    "Full Stack Developer",
+    "AI Developer",
+    "Portfolio",
+    "React",
+    "Next.js",
+    "Flutter",
+    "Machine Learning",
+  ],
+  authors: [{ name: "Denilson Morales" }],
+  openGraph: {
+    type: "website",
+    locale: "es_ES",
+    siteName: "Denilson Morales Portfolio",
+    title: "Denilson Morales | Full Stack & AI Developer",
+    description:
+      "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Denilson Morales | Full Stack & AI Developer",
+    description:
+      "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

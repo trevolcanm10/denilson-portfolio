@@ -35,7 +35,7 @@ export default function ServicesPage() {
           Servicios
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Soluciones技术 completas para transformar tus ideas en productos digitales reales.
+          Soluciones completas para transformar tus ideas en productos digitales reales.
         </p>
       </div>
 
