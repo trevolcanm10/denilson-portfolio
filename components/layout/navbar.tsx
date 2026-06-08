@@ -32,9 +32,20 @@ export function Navbar() {
   const router = useRouter();
   const spyActive = useScrollSpy(sectionIds, { threshold: 0.05 });
 
-  // D2: smooth scroll si estamos en home; si no, navegar primero a home
+  // D2: smooth scroll si estamos en home; si no, navegar primero a home.
+  // Caso especial: "Inicio" (href "/") hace scroll al top en vez de recargar.
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string, id: string) => {
+      // Inicio: scroll al top, evita recargar la página
+      if (href === "/") {
+        e.preventDefault();
+        if (pathname === "/") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          router.push("/");
+        }
+        return;
+      }
       if (!href.startsWith("/#")) return;
       e.preventDefault();
       if (pathname === "/") {

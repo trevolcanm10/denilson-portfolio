@@ -8,25 +8,21 @@ const infoCards = [
     icon: GraduationCap,
     title: "Formación",
     description: "Ingeniería de Software (cursando 5to ciclo)",
-    highlight: false,
   },
   {
     icon: Briefcase,
     title: "Freelance",
     description: "Agencia de viajes, repuestos, proyectos propios",
-    highlight: false,
   },
   {
     icon: BookOpen,
     title: "Aprendizaje",
     description: "Documentación oficial, Udemy cuando es necesario",
-    highlight: false,
   },
   {
     icon: Rocket,
     title: "Filosofía",
     description: "Construir {'>'} ver tutoriales",
-    highlight: true,
   },
 ];
 
@@ -59,13 +55,7 @@ export function About() {
               const Icon = card.icon;
               return (
                 <StaggerItem key={card.title}>
-                  <div
-                    className={`p-5 rounded-xl border-2 hover-lift cursor-default ${
-                      card.highlight
-                        ? "border-primary/30 bg-primary/5"
-                        : "border-border bg-card"
-                    }`}
-                  >
+                  <div className="p-5 rounded-xl border-2 border-border bg-card hover-lift cursor-default">
                     <div className="flex items-center gap-3 mb-2">
                       <Icon className="w-5 h-5 text-primary" />
                       <h3 className="font-semibold text-foreground">{card.title}</h3>
