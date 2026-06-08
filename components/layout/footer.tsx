@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Denilson Morales. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Denilson Morales &middot; Hecho con Next.js y mucho caf&eacute;
           </p>
 
           <div className="flex items-center gap-6">

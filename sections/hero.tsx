@@ -34,7 +34,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-sm text-muted-foreground"
         >
-          Full Stack Developer • AI Solutions Developer
+          Estudiante de Ingeniería de Software • Apps • Web • Datos
         </motion.div>
 
         {/* Title */}
@@ -44,8 +44,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
-          Construyo aplicaciones web modernas
-          <span className="text-primary"> con impacto real</span>
+          Me gusta construir cosas
+          <span className="text-primary"> que funcionen</span>
         </motion.h1>
 
         {/* Description */}
@@ -55,8 +55,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-muted-foreground text-lg"
         >
-          Desarrollo sistemas full stack, dashboards y soluciones de inteligencia
-          artificial enfocadas en resolver problemas reales con tecnología.
+          Desarrollo web, dashboards y proyectos de Machine Learning. 
+          Estoy en el proceso de convertirme en mejor dev cada día.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -96,7 +96,7 @@ export function Hero() {
           >
             GitHub
           </a>
-          <span className="text-muted-foreground">•</span>
+          <span className="text-muted-foreground">·</span>
           <a
             href="https://linkedin.com/in/denilson"
             target="_blank"
@@ -105,7 +105,7 @@ export function Hero() {
           >
             LinkedIn
           </a>
-          <span className="text-muted-foreground">•</span>
+          <span className="text-muted-foreground">·</span>
           <a
             href="mailto:denilson@example.com"
             className="text-muted-foreground hover:text-foreground transition"

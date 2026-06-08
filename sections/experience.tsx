@@ -55,9 +55,9 @@ export function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="relative pl-8 border-l-2 border-border"
+                className="relative pl-8 border-l-2 border-primary/30 hover:border-primary transition-colors"
               >
-                <div className="absolute -left-2 top-0 w-3 h-3 rounded-full bg-primary" />
+                <div className="absolute -left-2.5 top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
                 
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-3">
