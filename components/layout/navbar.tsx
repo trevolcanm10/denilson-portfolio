@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu } from "lucide-react";
@@ -32,8 +33,17 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="font-bold text-lg">
-          Portfolio
+        <Link href="/" className="flex items-center gap-2 font-bold text-lg">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden">
+            <Image
+              src="/avatar.png"
+              alt="Denilson"
+              fill
+              sizes="32px"
+              className="object-cover"
+            />
+          </div>
+          Denilson
         </Link>
 
         {/* Desktop Nav */}
@@ -69,8 +79,20 @@ export function Navbar() {
               <SheetContent side="right" className="w-72">
                 <div className="flex flex-col gap-6 mt-10">
                   
-                  <div className="text-sm text-muted-foreground">
-                    Navigation
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                      <Image
+                        src="/avatar.png"
+                        alt="Denilson"
+                        fill
+                        sizes="40px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-medium">Denilson Morales</p>
+                      <p className="text-xs text-muted-foreground">Full Stack Developer</p>
+                    </div>
                   </div>
                   
                   <div className="flex flex-col gap-4">
