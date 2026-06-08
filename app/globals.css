@@ -151,65 +151,65 @@
 
 /* ─── Section Gradient Backgrounds ─── */
 
-/* Hero - Azul arriba, se desvanece */
+/* Hero - Soft blue glow from top */
 @utility bg-gradient-hero {
-  background: linear-gradient(180deg, oklch(0.50 0.22 264 / 0.06) 0%, transparent 60%);
+  background: linear-gradient(180deg, oklch(0.80 0.08 240 / 0.15) 0%, oklch(0.92 0.04 260 / 0.08) 30%, transparent 60%);
 }
 .dark .bg-gradient-hero {
   background: linear-gradient(180deg, oklch(0.65 0.22 264 / 0.12) 0%, transparent 60%);
 }
 
-/* About - Púrpura lavanda */
+/* About - Warm lavender/purple */
 @utility bg-gradient-about {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.94 0.04 300 / 0.12) 30%, transparent 80%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 290 / 0.20) 20%, oklch(0.95 0.03 280 / 0.10) 50%, transparent 80%);
 }
 .dark .bg-gradient-about {
   background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 300 / 0.18) 30%, transparent 80%);
 }
 
-/* Currently - Esmeralda */
+/* Currently - Fresh mint/teal */
 @utility bg-gradient-currently {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.95 0.03 160 / 0.10) 20%, transparent 70%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.90 0.05 170 / 0.18) 15%, oklch(0.96 0.02 160 / 0.08) 50%, transparent 75%);
 }
 .dark .bg-gradient-currently {
   background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 160 / 0.15) 20%, transparent 70%);
 }
 
-/* Stats - Ámbar/durazno */
+/* Stats - Warm peach/amber */
 @utility bg-gradient-stats {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.94 0.04 50 / 0.08) 30%, transparent 70%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 60 / 0.18) 20%, oklch(0.95 0.03 50 / 0.08) 50%, transparent 75%);
 }
 .dark .bg-gradient-stats {
   background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 50 / 0.12) 30%, transparent 70%);
 }
 
-/* Skills - Azul cielo */
+/* Skills - Bright sky blue */
 @utility bg-gradient-skills {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.94 0.03 220 / 0.10) 40%, transparent 80%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 230 / 0.18) 25%, oklch(0.95 0.03 220 / 0.08) 60%, transparent 85%);
 }
 .dark .bg-gradient-skills {
   background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 220 / 0.15) 40%, transparent 80%);
 }
 
-/* Experience - Rosa/violeta */
+/* Experience - Soft rose/pink */
 @utility bg-gradient-experience {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.94 0.04 340 / 0.10) 30%, transparent 70%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 350 / 0.18) 20%, oklch(0.95 0.03 340 / 0.08) 50%, transparent 75%);
 }
 .dark .bg-gradient-experience {
   background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 340 / 0.15) 30%, transparent 70%);
 }
 
-/* Playground - Índigo */
+/* Playground - Light indigo */
 @utility bg-gradient-playground {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.93 0.05 240 / 0.12) 50%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.85 0.07 250 / 0.18) 30%, oklch(0.93 0.04 240 / 0.10) 60%, transparent 100%);
 }
 .dark .bg-gradient-playground {
   background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 240 / 0.20) 50%, transparent 100%);
 }
 
-/* Featured - Cian */
+/* Featured - Soft cyan */
 @utility bg-gradient-featured {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.94 0.03 200 / 0.10) 40%, transparent 100%);
+  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.05 200 / 0.18) 25%, oklch(0.95 0.03 190 / 0.08) 60%, transparent 100%);
 }
 .dark .bg-gradient-featured {
   background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 200 / 0.15) 40%, transparent 100%);
@@ -218,8 +218,8 @@
 /* ─── Hero Spotlight ─── */
 @utility hero-spotlight {
   background:
-    radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.50 0.22 264 / 0.08), transparent 70%),
-    radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.55 0.20 290 / 0.05), transparent 60%);
+    radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.55 0.20 250 / 0.12), transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.60 0.18 280 / 0.08), transparent 60%);
 }
 .dark .hero-spotlight {
   background:
