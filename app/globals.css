@@ -6,47 +6,47 @@
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-geist-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-}
+    --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+    --font-mono: var(--font-geist-mono);
+      --font-heading: var(--font-space-grotesk);
+            --color-sidebar-ring: var(--sidebar-ring);
+              --color-sidebar-border: var(--sidebar-border);
+                --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+                  --color-sidebar-accent: var(--sidebar-accent);
+                    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+                      --color-sidebar-primary: var(--sidebar-primary);
+                        --color-sidebar-foreground: var(--sidebar-foreground);
+                          --color-sidebar: var(--sidebar);
+                            --color-chart-5: var(--chart-5);
+                              --color-chart-4: var(--chart-4);
+                                --color-chart-3: var(--chart-3);
+                                  --color-chart-2: var(--chart-2);
+                                    --color-chart-1: var(--chart-1);
+                                      --color-ring: var(--ring);
+                                        --color-input: var(--input);
+                                          --color-border: var(--border);
+                                            --color-destructive: var(--destructive);
+                                              --color-accent-foreground: var(--accent-foreground);
+                                                --color-accent: var(--accent);
+                                                  --color-muted-foreground: var(--muted-foreground);
+                                                    --color-muted: var(--muted);
+                                                      --color-secondary-foreground: var(--secondary-foreground);
+                                                        --color-secondary: var(--secondary);
+                                                          --color-primary-foreground: var(--primary-foreground);
+                                                            --color-primary: var(--primary);
+                                                              --color-popover-foreground: var(--popover-foreground);
+                                                                --color-popover: var(--popover);
+                                                                  --color-card-foreground: var(--card-foreground);
+                                                                    --color-card: var(--card);
+                                                                      --radius-sm: calc(var(--radius) * 0.6);
+                                                                        --radius-md: calc(var(--radius) * 0.8);
+                                                                          --radius-lg: var(--radius);
+                                                                            --radius-xl: calc(var(--radius) * 1.4);
+                                                                              --radius-2xl: calc(var(--radius) * 1.8);
+                                                                                --radius-3xl: calc(var(--radius) * 2.2);
+                                                                                  --radius-4xl: calc(var(--radius) * 2.6);
+                                                                                  }
 
 /* ─── Light Theme ─── */
 :root {
@@ -54,85 +54,85 @@
   --foreground: #1A2419;
   --card: #E4E9DC;
   --card-foreground: #1A2419;
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.13 0.02 170);
+  --popover: #E4E9DC;
+  --popover-foreground: #1A2419;
   --primary: #2D422C;
   --primary-foreground: #F1F3E9;
-  --secondary: oklch(0.955 0.015 170);
-  --secondary-foreground: oklch(0.20 0.02 170);
-  --muted: #5A6E58;
-  --muted-foreground: #F1F3E9;
+  --secondary: #E4E9DC;
+  --secondary-foreground: #1A2419;
+  --muted: #E4E9DC;
+  --muted-foreground: #5A6E58;
   --accent: #786043;
   --accent-foreground: #F1F3E9;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.91 0.012 170);
-  --input: oklch(0.91 0.012 170);
+  --border: #D8DCC8;
+  --input: #D8DCC8;
   --ring: oklch(0.50 0.18 170);
-  --chart-1: oklch(0.50 0.18 170);
-  --chart-2: oklch(0.60 0.15 170);
-  --chart-3: oklch(0.70 0.10 170);
-  --chart-4: oklch(0.80 0.06 170);
-  --chart-5: oklch(0.88 0.03 170);
-  --radius: 0.75rem;
-  --sidebar: oklch(0.985 0.003 170);
-  --sidebar-foreground: oklch(0.13 0.02 170);
-  --sidebar-primary: oklch(0.50 0.18 170);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.955 0.015 170);
-  --sidebar-accent-foreground: oklch(0.20 0.02 170);
-  --sidebar-border: oklch(0.91 0.012 170);
-  --sidebar-ring: oklch(0.50 0.18 170);
+                                                                                                                        --chart-1: oklch(0.50 0.18 170);
+                                                                                                                          --chart-2: oklch(0.60 0.15 170);
+                                                                                                                            --chart-3: oklch(0.70 0.10 170);
+                                                                                                                              --chart-4: oklch(0.80 0.06 170);
+                                                                                                                                --chart-5: oklch(0.88 0.03 170);
+                                                                                                                                  --radius: 0.75rem;
+                                                                                                                                    --sidebar: oklch(0.985 0.003 170);
+                                                                                                                                      --sidebar-foreground: oklch(0.13 0.02 170);
+                                                                                                                                        --sidebar-primary: oklch(0.50 0.18 170);
+                                                                                                                                          --sidebar-primary-foreground: oklch(0.99 0 0);
+                                                                                                                                            --sidebar-accent: oklch(0.955 0.015 170);
+                                                                                                                                              --sidebar-accent-foreground: oklch(0.20 0.02 170);
+                                                                                                                                                --sidebar-border: oklch(0.91 0.012 170);
+                                                                                                                                                  --sidebar-ring: oklch(0.50 0.18 170);
 
-  /* Custom shadows for light mode */
-  --shadow-card: 0 1px 3px oklch(0.13 0.02 170 / 0.04),
-                 0 4px 12px oklch(0.50 0.18 170 / 0.03);
-  --shadow-card-hover: 0 4px 16px oklch(0.13 0.02 170 / 0.08),
-                       0 8px 32px oklch(0.50 0.18 170 / 0.06);
-  --shadow-navbar: 0 1px 2px oklch(0.13 0.02 170 / 0.04),
-                   0 4px 16px oklch(0.50 0.18 170 / 0.03);
-}
+                                                                                                                                                    /* Custom shadows for light mode */
+                                                                                                                                                      --shadow-card: 0 1px 3px oklch(0.13 0.02 170 / 0.04),
+                                                                                                                                                                       0 4px 12px oklch(0.50 0.18 170 / 0.03);
+                                                                                                                                                                         --shadow-card-hover: 0 4px 16px oklch(0.13 0.02 170 / 0.08),
+                                                                                                                                                                                                0 8px 32px oklch(0.50 0.18 170 / 0.06);
+                                                                                                                                                                                                  --shadow-navbar: 0 1px 2px oklch(0.13 0.02 170 / 0.04),
+                                                                                                                                                                                                                     0 4px 16px oklch(0.50 0.18 170 / 0.03);
+                                                                                                                                                                                                                     }
 
-/* ─── Dark Theme ─── */
-.dark {
-  --background: oklch(0.13 0.008 264);
-  --foreground: oklch(0.96 0.005 264);
-  --card: oklch(0.17 0.01 264);
-  --card-foreground: oklch(0.96 0.005 264);
-  --popover: oklch(0.17 0.01 264);
-  --popover-foreground: oklch(0.96 0.005 264);
-  --primary: oklch(0.65 0.22 264);
-  --primary-foreground: oklch(0.13 0 0);
-  --secondary: oklch(0.21 0.015 264);
-  --secondary-foreground: oklch(0.96 0.005 264);
-  --muted: oklch(0.21 0.008 264);
-  --muted-foreground: oklch(0.62 0.025 264);
-  --accent: oklch(0.21 0.015 264);
-  --accent-foreground: oklch(0.96 0.005 264);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.26 0.015 264);
-  --input: oklch(0.26 0.015 264);
-  --ring: oklch(0.65 0.22 264);
-  --chart-1: oklch(0.65 0.22 264);
-  --chart-2: oklch(0.55 0.18 264);
-  --chart-3: oklch(0.45 0.13 264);
-  --chart-4: oklch(0.35 0.08 264);
-  --chart-5: oklch(0.25 0.04 264);
-  --sidebar: oklch(0.15 0.008 264);
-  --sidebar-foreground: oklch(0.96 0.005 264);
-  --sidebar-primary: oklch(0.65 0.22 264);
-  --sidebar-primary-foreground: oklch(0.96 0.005 264);
-  --sidebar-accent: oklch(0.21 0.015 264);
-  --sidebar-accent-foreground: oklch(0.96 0.005 264);
-  --sidebar-border: oklch(0.26 0.015 264);
-  --sidebar-ring: oklch(0.65 0.22 264);
+                                                                                                                                                                                                                     /* ─── Dark Theme ─── */
+                                                                                                                                                                                                                     .dark {
+                                                                                                                                                                                                                       --background: oklch(0.13 0.008 264);
+                                                                                                                                                                                                                         --foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                           --card: oklch(0.17 0.01 264);
+                                                                                                                                                                                                                             --card-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                               --popover: oklch(0.17 0.01 264);
+                                                                                                                                                                                                                                 --popover-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                   --primary: oklch(0.65 0.22 264);
+                                                                                                                                                                                                                                     --primary-foreground: oklch(0.13 0 0);
+                                                                                                                                                                                                                                       --secondary: oklch(0.21 0.015 264);
+                                                                                                                                                                                                                                         --secondary-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                           --muted: oklch(0.21 0.008 264);
+                                                                                                                                                                                                                                             --muted-foreground: oklch(0.62 0.025 264);
+                                                                                                                                                                                                                                               --accent: oklch(0.21 0.015 264);
+                                                                                                                                                                                                                                                 --accent-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                                   --destructive: oklch(0.704 0.191 22.216);
+                                                                                                                                                                                                                                                     --border: oklch(0.26 0.015 264);
+                                                                                                                                                                                                                                                       --input: oklch(0.26 0.015 264);
+                                                                                                                                                                                                                                                         --ring: oklch(0.65 0.22 264);
+                                                                                                                                                                                                                                                           --chart-1: oklch(0.65 0.22 264);
+                                                                                                                                                                                                                                                             --chart-2: oklch(0.55 0.18 264);
+                                                                                                                                                                                                                                                               --chart-3: oklch(0.45 0.13 264);
+                                                                                                                                                                                                                                                                 --chart-4: oklch(0.35 0.08 264);
+                                                                                                                                                                                                                                                                   --chart-5: oklch(0.25 0.04 264);
+                                                                                                                                                                                                                                                                     --sidebar: oklch(0.15 0.008 264);
+                                                                                                                                                                                                                                                                       --sidebar-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                                                         --sidebar-primary: oklch(0.65 0.22 264);
+                                                                                                                                                                                                                                                                           --sidebar-primary-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                                                             --sidebar-accent: oklch(0.21 0.015 264);
+                                                                                                                                                                                                                                                                               --sidebar-accent-foreground: oklch(0.96 0.005 264);
+                                                                                                                                                                                                                                                                                 --sidebar-border: oklch(0.26 0.015 264);
+                                                                                                                                                                                                                                                                                   --sidebar-ring: oklch(0.65 0.22 264);
 
-  --shadow-card: 0 1px 3px oklch(0 0 0 / 0.3),
-                 0 4px 12px oklch(0 0 0 / 0.2);
-  --shadow-card-hover: 0 4px 16px oklch(0 0 0 / 0.4),
-                       0 8px 32px oklch(0.65 0.22 264 / 0.08);
-  --shadow-navbar: 0 1px 2px oklch(0 0 0 / 0.3),
-                   0 4px 16px oklch(0 0 0 / 0.2);
-}
+                                                                                                                                                                                                                                                                                     --shadow-card: 0 1px 3px oklch(0 0 0 / 0.3),
+                                                                                                                                                                                                                                                                                                      0 4px 12px oklch(0 0 0 / 0.2);
+                                                                                                                                                                                                                                                                                                        --shadow-card-hover: 0 4px 16px oklch(0 0 0 / 0.4),
+                                                                                                                                                                                                                                                                                                                               0 8px 32px oklch(0.65 0.22 264 / 0.08);
+                                                                                                                                                                                                                                                                                                                                 --shadow-navbar: 0 1px 2px oklch(0 0 0 / 0.3),
+                                                                                                                                                                                                                                                                                                                                                    0 4px 16px oklch(0 0 0 / 0.2);
+                                                                                                                                                                                                                                                                                                                                                    }
 
 /* ─── Base Styles ─── */
 @layer base {
@@ -147,177 +147,192 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    font-weight: 600;
+  }
+  h1 {
+    font-size: clamp(2.25rem, 4vw + 1rem, 3.75rem);
+  }
+  h2 {
+    font-size: clamp(1.75rem, 2.5vw + 0.75rem, 2.5rem);
+  }
+  h3 {
+    font-size: clamp(1.375rem, 1.5vw + 0.5rem, 1.75rem);
+  }
 }
 
-/* ─── Section Gradient Backgrounds ─── */
+                                                                                                                                                                                                                                                                                                                                                                                    /* ─── Section Gradient Backgrounds ─── */
 
-/* Hero - Soft blue glow from top */
-@utility bg-gradient-hero {
-  background: linear-gradient(180deg, oklch(0.80 0.08 240 / 0.15) 0%, oklch(0.92 0.04 260 / 0.08) 30%, transparent 60%);
-}
-.dark .bg-gradient-hero {
-  background: linear-gradient(180deg, oklch(0.65 0.22 264 / 0.12) 0%, transparent 60%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                    /* Hero - Soft blue glow from top */
+                                                                                                                                                                                                                                                                                                                                                                                    @utility bg-gradient-hero {
+                                                                                                                                                                                                                                                                                                                                                                                      background: linear-gradient(180deg, oklch(0.80 0.08 240 / 0.15) 0%, oklch(0.92 0.04 260 / 0.08) 30%, transparent 60%);
+                                                                                                                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                                                                                                                      .dark .bg-gradient-hero {
+                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(180deg, oklch(0.65 0.22 264 / 0.12) 0%, transparent 60%);
+                                                                                                                                                                                                                                                                                                                                                                                        }
 
-/* About - Warm lavender/purple */
-@utility bg-gradient-about {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 290 / 0.20) 20%, oklch(0.95 0.03 280 / 0.10) 50%, transparent 80%);
-}
-.dark .bg-gradient-about {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 300 / 0.18) 30%, transparent 80%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                        /* About - Warm lavender/purple */
+                                                                                                                                                                                                                                                                                                                                                                                        @utility bg-gradient-about {
+                                                                                                                                                                                                                                                                                                                                                                                          background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 290 / 0.20) 20%, oklch(0.95 0.03 280 / 0.10) 50%, transparent 80%);
+                                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                                          .dark .bg-gradient-about {
+                                                                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 300 / 0.18) 30%, transparent 80%);
+                                                                                                                                                                                                                                                                                                                                                                                            }
 
-/* Currently - Fresh mint/teal */
-@utility bg-gradient-currently {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.90 0.05 170 / 0.18) 15%, oklch(0.96 0.02 160 / 0.08) 50%, transparent 75%);
-}
-.dark .bg-gradient-currently {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 160 / 0.15) 20%, transparent 70%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                            /* Currently - Fresh mint/teal */
+                                                                                                                                                                                                                                                                                                                                                                                            @utility bg-gradient-currently {
+                                                                                                                                                                                                                                                                                                                                                                                              background: linear-gradient(180deg, transparent 0%, oklch(0.90 0.05 170 / 0.18) 15%, oklch(0.96 0.02 160 / 0.08) 50%, transparent 75%);
+                                                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                                                                                              .dark .bg-gradient-currently {
+                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 160 / 0.15) 20%, transparent 70%);
+                                                                                                                                                                                                                                                                                                                                                                                                }
 
-/* Stats - Warm peach/amber */
-@utility bg-gradient-stats {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 60 / 0.18) 20%, oklch(0.95 0.03 50 / 0.08) 50%, transparent 75%);
-}
-.dark .bg-gradient-stats {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 50 / 0.12) 30%, transparent 70%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                /* Stats - Warm peach/amber */
+                                                                                                                                                                                                                                                                                                                                                                                                @utility bg-gradient-stats {
+                                                                                                                                                                                                                                                                                                                                                                                                  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 60 / 0.18) 20%, oklch(0.95 0.03 50 / 0.08) 50%, transparent 75%);
+                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                  .dark .bg-gradient-stats {
+                                                                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 50 / 0.12) 30%, transparent 70%);
+                                                                                                                                                                                                                                                                                                                                                                                                    }
 
-/* Skills - Bright sky blue */
-@utility bg-gradient-skills {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 230 / 0.18) 25%, oklch(0.95 0.03 220 / 0.08) 60%, transparent 85%);
-}
-.dark .bg-gradient-skills {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 220 / 0.15) 40%, transparent 80%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                    /* Skills - Bright sky blue */
+                                                                                                                                                                                                                                                                                                                                                                                                    @utility bg-gradient-skills {
+                                                                                                                                                                                                                                                                                                                                                                                                      background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 230 / 0.18) 25%, oklch(0.95 0.03 220 / 0.08) 60%, transparent 85%);
+                                                                                                                                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                                                                                                                                      .dark .bg-gradient-skills {
+                                                                                                                                                                                                                                                                                                                                                                                                        background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 220 / 0.15) 40%, transparent 80%);
+                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-/* Experience - Soft rose/pink */
-@utility bg-gradient-experience {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 350 / 0.18) 20%, oklch(0.95 0.03 340 / 0.08) 50%, transparent 75%);
-}
-.dark .bg-gradient-experience {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 340 / 0.15) 30%, transparent 70%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                        /* Experience - Soft rose/pink */
+                                                                                                                                                                                                                                                                                                                                                                                                        @utility bg-gradient-experience {
+                                                                                                                                                                                                                                                                                                                                                                                                          background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.06 350 / 0.18) 20%, oklch(0.95 0.03 340 / 0.08) 50%, transparent 75%);
+                                                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                                                          .dark .bg-gradient-experience {
+                                                                                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 340 / 0.15) 30%, transparent 70%);
+                                                                                                                                                                                                                                                                                                                                                                                                            }
 
-/* Playground - Light indigo */
-@utility bg-gradient-playground {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.85 0.07 250 / 0.18) 30%, oklch(0.93 0.04 240 / 0.10) 60%, transparent 100%);
-}
-.dark .bg-gradient-playground {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 240 / 0.20) 50%, transparent 100%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                            /* Playground - Light indigo */
+                                                                                                                                                                                                                                                                                                                                                                                                            @utility bg-gradient-playground {
+                                                                                                                                                                                                                                                                                                                                                                                                              background: linear-gradient(180deg, transparent 0%, oklch(0.85 0.07 250 / 0.18) 30%, oklch(0.93 0.04 240 / 0.10) 60%, transparent 100%);
+                                                                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                                                                                                              .dark .bg-gradient-playground {
+                                                                                                                                                                                                                                                                                                                                                                                                                background: linear-gradient(180deg, transparent 0%, oklch(0.28 0.10 240 / 0.20) 50%, transparent 100%);
+                                                                                                                                                                                                                                                                                                                                                                                                                }
 
-/* Featured - Soft cyan */
-@utility bg-gradient-featured {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.05 200 / 0.18) 25%, oklch(0.95 0.03 190 / 0.08) 60%, transparent 100%);
-}
-.dark .bg-gradient-featured {
-  background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 200 / 0.15) 40%, transparent 100%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                /* Featured - Soft cyan */
+                                                                                                                                                                                                                                                                                                                                                                                                                @utility bg-gradient-featured {
+                                                                                                                                                                                                                                                                                                                                                                                                                  background: linear-gradient(180deg, transparent 0%, oklch(0.88 0.05 200 / 0.18) 25%, oklch(0.95 0.03 190 / 0.08) 60%, transparent 100%);
+                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                  .dark .bg-gradient-featured {
+                                                                                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(180deg, transparent 0%, oklch(0.25 0.08 200 / 0.15) 40%, transparent 100%);
+                                                                                                                                                                                                                                                                                                                                                                                                                    }
 
-/* ─── Hero Spotlight ─── */
-@utility hero-spotlight {
-  background:
-    radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.55 0.20 250 / 0.12), transparent 70%),
-    radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.60 0.18 280 / 0.08), transparent 60%);
-}
-.dark .hero-spotlight {
-  background:
-    radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.65 0.22 264 / 0.15), transparent 70%),
-    radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.70 0.18 290 / 0.08), transparent 60%);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                    /* ─── Hero Spotlight ─── */
+                                                                                                                                                                                                                                                                                                                                                                                                                    @utility hero-spotlight {
+                                                                                                                                                                                                                                                                                                                                                                                                                      background:
+                                                                                                                                                                                                                                                                                                                                                                                                                          radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.55 0.20 250 / 0.12), transparent 70%),
+                                                                                                                                                                                                                                                                                                                                                                                                                              radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.60 0.18 280 / 0.08), transparent 60%);
+                                                                                                                                                                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                                                                                                                                                              .dark .hero-spotlight {
+                                                                                                                                                                                                                                                                                                                                                                                                                                background:
+                                                                                                                                                                                                                                                                                                                                                                                                                                    radial-gradient(ellipse 800px 500px at 50% 30%, oklch(0.65 0.22 264 / 0.15), transparent 70%),
+                                                                                                                                                                                                                                                                                                                                                                                                                                        radial-gradient(ellipse 400px 300px at 50% 20%, oklch(0.70 0.18 290 / 0.08), transparent 60%);
+                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-/* ─── Custom Utilities ─── */
+                                                                                                                                                                                                                                                                                                                                                                                                                                        /* ─── Custom Utilities ─── */
 
-/* Dot grid background */
-@utility bg-dot-grid {
-  background-image: radial-gradient(oklch(0.40 0.02 264 / 0.12) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-.dark .bg-dot-grid {
-  background-image: radial-gradient(oklch(0.7 0.02 264 / 0.06) 1px, transparent 1px);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                        /* Dot grid background */
+                                                                                                                                                                                                                                                                                                                                                                                                                                        @utility bg-dot-grid {
+                                                                                                                                                                                                                                                                                                                                                                                                                                          background-image: radial-gradient(oklch(0.40 0.02 264 / 0.12) 1px, transparent 1px);
+                                                                                                                                                                                                                                                                                                                                                                                                                                            background-size: 20px 20px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                                                            .dark .bg-dot-grid {
+                                                                                                                                                                                                                                                                                                                                                                                                                                              background-image: radial-gradient(oklch(0.7 0.02 264 / 0.06) 1px, transparent 1px);
+                                                                                                                                                                                                                                                                                                                                                                                                                                              }
 
-/* Top ambient glow */
-@utility bg-grid-glow {
-  background:
-    radial-gradient(ellipse 900px 400px at 50% -50px, oklch(0.50 0.22 264 / 0.07), transparent),
-    radial-gradient(ellipse 600px 300px at 80% 100px, oklch(0.60 0.15 300 / 0.04), transparent);
-}
-.dark .bg-grid-glow {
-  background:
-    radial-gradient(ellipse 900px 400px at 50% -50px, oklch(0.65 0.22 264 / 0.06), transparent),
-    radial-gradient(ellipse 600px 300px at 80% 100px, oklch(0.55 0.15 300 / 0.03), transparent);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                              /* Top ambient glow */
+                                                                                                                                                                                                                                                                                                                                                                                                                                              @utility bg-grid-glow {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                background:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    radial-gradient(ellipse 900px 400px at 50% -50px, oklch(0.50 0.22 264 / 0.07), transparent),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        radial-gradient(ellipse 600px 300px at 80% 100px, oklch(0.60 0.15 300 / 0.04), transparent);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        .dark .bg-grid-glow {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          background:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              radial-gradient(ellipse 900px 400px at 50% -50px, oklch(0.65 0.22 264 / 0.06), transparent),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  radial-gradient(ellipse 600px 300px at 80% 100px, oklch(0.55 0.15 300 / 0.03), transparent);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
 
-/* Card shadow utilities */
-@utility shadow-card {
-  box-shadow: var(--shadow-card);
-}
-@utility shadow-card-hover {
-  box-shadow: var(--shadow-card-hover);
-}
-@utility shadow-navbar {
-  box-shadow: var(--shadow-navbar);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  /* Card shadow utilities */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @utility shadow-card {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    box-shadow: var(--shadow-card);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @utility shadow-card-hover {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      box-shadow: var(--shadow-card-hover);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @utility shadow-navbar {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        box-shadow: var(--shadow-navbar);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-/* Gradient text */
-@utility text-gradient {
-  background: linear-gradient(135deg, oklch(0.50 0.22 264), oklch(0.55 0.20 290));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.dark .text-gradient {
-  background: linear-gradient(135deg, oklch(0.65 0.22 264), oklch(0.70 0.18 290));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* Gradient text */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @utility text-gradient {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          background: linear-gradient(135deg, oklch(0.50 0.22 264), oklch(0.55 0.20 290));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -webkit-background-clip: text;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              -webkit-text-fill-color: transparent;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                background-clip: text;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .dark .text-gradient {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background: linear-gradient(135deg, oklch(0.65 0.22 264), oklch(0.70 0.18 290));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -webkit-background-clip: text;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      -webkit-text-fill-color: transparent;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        background-clip: text;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
 
-/* Glass card effect */
-@utility glass-card {
-  background: oklch(1 0 0 / 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid oklch(0.91 0.012 264 / 0.6);
-  box-shadow: var(--shadow-card);
-}
-.dark .glass-card {
-  background: oklch(0.17 0.01 264 / 0.5);
-  border-color: oklch(0.26 0.015 264 / 0.5);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* Glass card effect */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @utility glass-card {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          background: oklch(1 0 0 / 0.6);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            backdrop-filter: blur(12px);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              border: 1px solid oklch(0.91 0.012 264 / 0.6);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                box-shadow: var(--shadow-card);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .dark .glass-card {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  background: oklch(0.17 0.01 264 / 0.5);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    border-color: oklch(0.26 0.015 264 / 0.5);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
 
-/* Avatar glow ring */
-@utility avatar-glow {
-  box-shadow:
-    0 0 0 4px oklch(0.985 0.002 270),
-    0 0 20px oklch(0.50 0.22 264 / 0.15),
-    0 0 40px oklch(0.50 0.22 264 / 0.08);
-}
-.dark .avatar-glow {
-  box-shadow:
-    0 0 0 4px oklch(0.13 0.008 264),
-    0 0 20px oklch(0.65 0.22 264 / 0.2),
-    0 0 40px oklch(0.65 0.22 264 / 0.1);
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    /* Avatar glow ring */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @utility avatar-glow {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      box-shadow:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          0 0 0 4px oklch(0.985 0.002 270),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              0 0 20px oklch(0.50 0.22 264 / 0.15),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  0 0 40px oklch(0.50 0.22 264 / 0.08);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  .dark .avatar-glow {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    box-shadow:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        0 0 0 4px oklch(0.13 0.008 264),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            0 0 20px oklch(0.65 0.22 264 / 0.2),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0 0 40px oklch(0.65 0.22 264 / 0.1);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
 
-/* Section divider gradient line */
-@utility section-divider {
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    oklch(0.50 0.22 264 / 0.2),
-    oklch(0.55 0.20 290 / 0.15),
-    transparent
-  );
-}
-.dark .section-divider {
-  background: linear-gradient(
-    to right,
-    transparent,
-    oklch(0.65 0.22 264 / 0.15),
-    oklch(0.60 0.18 290 / 0.1),
-    transparent
-  );
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* Section divider gradient line */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @utility section-divider {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  height: 1px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background: linear-gradient(
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        to right,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            transparent,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                oklch(0.50 0.22 264 / 0.2),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    oklch(0.55 0.20 290 / 0.15),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        transparent
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          .dark .section-divider {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            background: linear-gradient(
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                to right,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transparent,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        oklch(0.65 0.22 264 / 0.15),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            oklch(0.60 0.18 290 / 0.1),
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                transparent
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
