@@ -3,6 +3,8 @@ import { Inter, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/layout/footer";
+import { ScrollProgress } from "@/components/layout/scroll-progress";
+import { AuroraBg } from "@/components/shared/aurora-bg";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,14 +46,12 @@ export const metadata: Metadata = {
     locale: "es_ES",
     siteName: "Denilson Morales Portfolio",
     title: "Denilson Morales | Full Stack & AI Developer",
-    description:
-      "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
+    description: "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Denilson Morales | Full Stack & AI Developer",
-    description:
-      "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
+    description: "Desarrollador Full Stack y especialista en soluciones de Inteligencia Artificial.",
   },
   robots: {
     index: true,
@@ -97,10 +97,15 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col text-foreground">
         <ThemeProvider>
+          {/* B4: Scroll progress bar */}
+          <ScrollProgress />
+
           {/* Global background layers */}
           <div className="pointer-events-none fixed inset-0 z-0 bg-background" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-dot-grid" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-grid-glow" />
+          {/* C2: Aurora animada */}
+          <AuroraBg />
 
           {/* Content wrapper */}
           <div className="relative z-10 flex flex-col min-h-screen w-full">

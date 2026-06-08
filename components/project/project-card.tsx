@@ -13,9 +13,9 @@ export function ProjectCard({ project }: Props) {
   return (
     <Link href={`/projects/${project.slug}`} className="block group">
       <motion.article
-        whileHover={{ y: -6 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="glass-card overflow-hidden rounded-2xl border p-5 hover:border-primary/40 hover:shadow-card-hover transition-all duration-300 flex flex-col h-full"
+        whileHover={{ y: -4 }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        className="hover-lift glass-card overflow-hidden rounded-2xl border p-5 hover:border-primary/40 flex flex-col h-full"
       >
         {/* Aspect ratio video wrapper for image with hover scale */}
         <div className="relative aspect-video overflow-hidden rounded-xl mb-4 bg-muted border">
@@ -58,4 +58,4 @@ export function ProjectCard({ project }: Props) {
       </motion.article>
     </Link>
   );
-}
+}

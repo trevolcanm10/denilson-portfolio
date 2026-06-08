@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
+import { motion, useReducedMotion, type HTMLMotionProps } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -41,24 +42,50 @@ const buttonVariants = cva(
   }
 )
 
+// A3: motion.create para wrappear el botón con whileTap spring.
+// Respetamos prefers-reduced-motion deshabilitando la animación.
+const MotionButton = motion.create("button")
+
+type ButtonProps = HTMLMotionProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+  }
+
 function Button({
   className,
   variant = "default",
   size = "default",
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot.Root : "button"
+}: ButtonProps) {
+  const reduce = useReducedMotion()
+
+  if (asChild) {
+    // Cast a React.ComponentProps<"button"> para evitar choques de tipos
+    // entre HTMLMotionProps (que admite MotionValue en children) y Slot.
+    const slotProps = props as unknown as React.ComponentProps<"button">
+    return (
+      <Slot.Root
+        data-slot="button"
+        data-variant={variant}
+        data-size={size}
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...slotProps}
+      />
+    )
+  }
 
   return (
-    <Comp
+    <MotionButton
       data-slot="button"
       data-variant={variant}
       data-size={size}
       className={cn(buttonVariants({ variant, size, className }))}
+      whileTap={
+        reduce
+          ? undefined
+          : { scale: 0.97, transition: { type: "spring", stiffness: 400, damping: 20 } }
+      }
       {...props}
     />
   )

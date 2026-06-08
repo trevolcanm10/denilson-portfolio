@@ -1,8 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Brain, Cpu, Play, RefreshCw, Trophy, Star } from "lucide-react";
+import { Brain, Cpu, Play, RefreshCw, Trophy } from "lucide-react";
+
+// (useEffect eliminado: el auto-ajuste se hace en los onChange handlers)
+
 
 interface Team {
   id: string;
@@ -34,13 +37,19 @@ export function PredictorWidget() {
     analysis: string;
   } | null>(null);
 
-  // Auto adjust away team if it matches home team
-  useEffect(() => {
-    if (homeTeam === awayTeam) {
-      const remaining = teams.find((t) => t.id !== homeTeam);
+  // Auto-adjust inline: si el nuevo home coincide con away, mover away al primer disponible.
+  const handleHomeChange = useCallback((next: string) => {
+    setHomeTeam(next);
+    if (next === awayTeam) {
+      const remaining = teams.find((t) => t.id !== next);
       if (remaining) setAwayTeam(remaining.id);
     }
-  }, [homeTeam, awayTeam]);
+  }, [awayTeam]);
+
+  const handleAwayChange = useCallback((next: string) => {
+    if (next === homeTeam) return; // bloqueado por el <option disabled> de todos modos
+    setAwayTeam(next);
+  }, [homeTeam]);
 
   const pipelineMessages = [
     "Descargando historial de enfrentamientos (Web Scraping)...",
@@ -127,7 +136,7 @@ export function PredictorWidget() {
           </label>
           <select
             value={homeTeam}
-            onChange={(e) => setHomeTeam(e.target.value)}
+            onChange={(e) => handleHomeChange(e.target.value)}
             disabled={isPredicting}
             className="w-full px-3 py-2 rounded-lg border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50"
           >
@@ -145,7 +154,7 @@ export function PredictorWidget() {
           </label>
           <select
             value={awayTeam}
-            onChange={(e) => setAwayTeam(e.target.value)}
+            onChange={(e) => handleAwayChange(e.target.value)}
             disabled={isPredicting}
             className="w-full px-3 py-2 rounded-lg border bg-background text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50"
           >

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 const experiences = [
   {
@@ -39,30 +39,20 @@ export function Experience() {
   return (
     <section className="py-20 px-4 bg-muted/30">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold mb-12">
+        <FadeIn className="mb-12">
+          <h2 className="text-3xl font-bold">
             Trayectoria <span className="text-gradient">& Experiencia</span>
           </h2>
+        </FadeIn>
 
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={exp.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative pl-8 border-l-2 border-primary/20 hover:border-primary/50 transition-colors group"
-              >
+        <StaggerContainer className="space-y-8" stagger={0.12}>
+          {experiences.map((exp) => (
+            <StaggerItem key={exp.title}>
+              <div className="relative pl-8 border-l-2 border-primary/20 hover:border-primary/50 transition-colors group">
                 {/* Timeline dot with hover scaling */}
-                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-background group-hover:scale-125 group-hover:bg-primary transition-all duration-300" />
-                
-                <div className="space-y-3 p-5 rounded-2xl hover:bg-card/40 hover:shadow-sm border border-transparent hover:border-border transition-all duration-300">
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-background group-hover:scale-125 transition-all duration-300" />
+
+                <div className="space-y-3 p-5 rounded-2xl hover:bg-card/40 hover:shadow-sm border border-transparent hover:border-border hover-lift cursor-default">
                   <div className="flex flex-wrap items-center gap-3">
                     <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
                       {exp.title}
@@ -84,10 +74,10 @@ export function Experience() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
       </div>
     </section>
   );

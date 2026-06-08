@@ -14,32 +14,32 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section className="hero-spotlight">
+        <section id="inicio" className="hero-spotlight">
           <Hero />
         </section>
 
-        <section className="bg-gradient-about">
+        <section id="sobre-mi" className="bg-gradient-about">
           <About />
         </section>
 
-        <section className="bg-gradient-currently">
+        <section id="ahora" className="bg-gradient-currently">
           <Currently />
         </section>
 
-        <section className="bg-gradient-stats">
+        <section id="stats" className="bg-gradient-stats">
           <Stats />
         </section>
 
-        <section className="bg-gradient-skills">
+        <section id="skills" className="bg-gradient-skills">
           <Skills />
         </section>
 
-        <section className="bg-gradient-experience">
+        <section id="trayectoria" className="bg-gradient-experience">
           <Experience />
         </section>
-        
+
         {/* Playground section */}
-        <section className="bg-gradient-playground">
+        <section id="playground" className="bg-gradient-playground">
           <div className="py-20 px-4 border-y border-border/50">
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="text-center space-y-2">
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gradient-featured">
+        <section id="proyectos" className="bg-gradient-featured">
           <FeaturedProjects />
         </section>
       </main>

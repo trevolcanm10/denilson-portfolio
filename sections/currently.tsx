@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Hammer, BookOpen, MapPin, Target } from "lucide-react";
+import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 const currentItems = [
   {
@@ -30,20 +30,17 @@ export function Currently() {
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold mb-8">Ahora mismo</h2>
+        <FadeIn className="mb-8">
+          <h2 className="text-3xl font-bold">Ahora mismo</h2>
+        </FadeIn>
 
-          <div className="p-6 rounded-2xl border glass-card hover:border-primary/40 hover:shadow-card-hover transition-all duration-300">
-            <div className="grid gap-5">
-              {currentItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.label} className="flex items-start gap-4">
+        <div className="p-6 rounded-2xl border glass-card hover-lift hover:border-primary/40 hover:shadow-card-hover">
+          <StaggerContainer className="grid gap-5" stagger={0.08}>
+            {currentItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <StaggerItem key={item.label}>
+                  <div className="flex items-start gap-4">
                     <Icon className="w-5 h-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-xs text-muted-foreground uppercase tracking-wider">
@@ -52,11 +49,11 @@ export function Currently() {
                       <p className="text-foreground font-medium">{item.value}</p>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </motion.div>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );

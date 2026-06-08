@@ -3,11 +3,16 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { SplitText } from "@/components/shared/split-text";
+import { FloatingParticles } from "@/components/shared/floating-particles";
 
 export function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center px-4 pt-24">
-      <div className="max-w-3xl text-center space-y-10">
+    <section className="relative min-h-[80vh] flex items-center justify-center px-4 pt-24 overflow-hidden">
+      {/* C1: Partículas decorativas */}
+      <FloatingParticles count={16} />
+
+      <div className="max-w-3xl text-center space-y-10 relative z-10">
         {/* Avatar */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -37,16 +42,20 @@ export function Hero() {
           Desarrollador Full Stack & Especialista en Machine Learning
         </motion.div>
 
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold leading-tight tracking-tight"
-        >
-          Construyendo aplicaciones y datos
-          <span className="text-gradient block sm:inline"> con inteligencia</span>
-        </motion.h1>
+        {/* Title con B2: split text */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+          <SplitText
+            text="Construyendo aplicaciones y datos"
+            as="span"
+            initial
+            delay={0.2}
+            stagger={0.04}
+            className="block"
+          />
+          <span className="text-gradient-pan block sm:inline">
+            {" "}con inteligencia
+          </span>
+        </h1>
 
         {/* Description */}
         <motion.p
@@ -92,7 +101,7 @@ export function Hero() {
             href="https://github.com/trevolcanm10"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="text-muted-foreground hover:text-foreground link-underline transition-colors"
           >
             GitHub
           </a>
@@ -101,14 +110,14 @@ export function Hero() {
             href="https://linkedin.com/in/denilson"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="text-muted-foreground hover:text-foreground link-underline transition-colors"
           >
             LinkedIn
           </a>
           <span className="text-muted-foreground">·</span>
           <a
             href="mailto:denilson@example.com"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="text-muted-foreground hover:text-foreground link-underline transition-colors"
           >
             Email
           </a>
