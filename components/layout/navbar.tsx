@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu } from "lucide-react";
+import { motion } from "framer-motion";
 
 import {
   Sheet,
@@ -47,20 +48,34 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`text-sm transition ${
-                isActive(item.href)
-                  ? "text-foreground font-medium"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center gap-2">
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative px-3 py-1.5 text-sm transition-colors rounded-lg ${
+                  active
+                    ? "text-foreground font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {active && (
+                  <motion.span
+                    layoutId="desktop-nav-active"
+                    className="absolute inset-0 bg-secondary rounded-lg -z-10"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30
+                    }}
+                  />
+                )}
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right actions */}

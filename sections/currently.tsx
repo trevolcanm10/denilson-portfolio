@@ -38,7 +38,7 @@ export function Currently() {
         >
           <h2 className="text-3xl font-bold mb-8">Ahora mismo</h2>
 
-          <div className="p-6 rounded-2xl border-2 border-border bg-card">
+          <div className="p-6 rounded-2xl border glass-card hover:border-primary/40 hover:shadow-card-hover transition-all duration-300">
             <div className="grid gap-5">
               {currentItems.map((item) => {
                 const Icon = item.icon;

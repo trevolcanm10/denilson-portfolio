@@ -56,16 +56,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Denilson Morales",
+    "jobTitle": "Full Stack & AI Developer",
+    "knowsAbout": [
+      "Software Engineering",
+      "Web Development",
+      "Machine Learning",
+      "AI Solutions",
+      "Next.js",
+      "Flutter"
+    ],
+    "sameAs": [
+      "https://github.com/trevolcanm10",
+      "https://linkedin.com/in/denilson"
+    ]
+  };
+
   return (
     <html
       lang="es"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          {children}
-          <Footer />
+          {/* Background layers */}
+          <div className="pointer-events-none fixed inset-0 z-0 bg-dot-grid" />
+          <div className="pointer-events-none fixed inset-0 z-0 bg-grid-glow" />
+
+          {/* Content wrapper */}
+          <div className="relative z-10 flex flex-col min-h-screen w-full">
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -15,7 +15,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="flex justify-center"
         >
-          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-border shadow-lg">
+          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-border avatar-glow">
             <Image
               src="/avatar.png"
               alt="Denilson Morales"
@@ -32,9 +32,9 @@ export function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-sm text-muted-foreground"
+          className="text-sm text-muted-foreground font-medium uppercase tracking-wider"
         >
-          Estudiante de Ingeniería de Software • Apps • Web • Datos
+          Desarrollador Full Stack & Especialista en Machine Learning
         </motion.div>
 
         {/* Title */}
@@ -42,10 +42,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold leading-tight"
+          className="text-4xl md:text-6xl font-bold leading-tight tracking-tight"
         >
-          Me gusta construir cosas
-          <span className="text-primary"> que funcionen</span>
+          Construyendo aplicaciones y datos
+          <span className="text-gradient block sm:inline"> con inteligencia</span>
         </motion.h1>
 
         {/* Description */}
@@ -53,10 +53,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-muted-foreground text-lg"
+          className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          Desarrollo web, dashboards y proyectos de Machine Learning. 
-          Estoy en el proceso de convertirme en mejor dev cada día.
+          Ingeniero de Software enfocado en el desarrollo web robusto, dashboards interactivos y modelos predictivos de Machine Learning. Transformo datos complejos en soluciones reales.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -68,18 +67,19 @@ export function Hero() {
         >
           <Link
             href="/projects"
-            className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition duration-300 text-center"
           >
             Ver proyectos
           </Link>
 
           <Link
             href="/contact"
-            className="px-6 py-3 rounded-lg border border-border hover:bg-muted transition font-medium"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl border border-border hover:bg-muted hover:-translate-y-0.5 transition duration-300 font-medium text-center"
           >
             Contactarme
           </Link>
         </motion.div>
+
 
         {/* Social links */}
         <motion.div

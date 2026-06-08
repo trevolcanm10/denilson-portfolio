@@ -22,13 +22,13 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Soy <span className="text-foreground font-medium">Denilson Morales</span>, estudiante de Ingeniería de Software. Me gusta pasar horas debuggeando algo y descubrir que el problema era un punto y coma. Así aprendo.
+                Soy <span className="text-foreground font-medium">Denilson Morales</span>, estudiante de Ingeniería de Software. Me apasiona resolver problemas lógicos complejos, diseñar flujos de usuario intuitivos y estructurar arquitecturas de datos limpias.
               </p>
               <p>
-                Trabajo como <span className="text-foreground font-medium">freelancer</span> desde hace un año, ayudando a negocios locales a dejar atrás el Excel y el WhatsApp. Hasta ahora pasé por una agencia de viajes y una empresa de repuestos de carros. También hago proyectos por hobby.
+                Desde hace más de un año trabajo como <span className="text-foreground font-medium">desarrollador freelance</span>, ayudando a negocios y emprendimientos a digitalizar sus procesos, automatizar tareas manuales y crear herramientas a medida. He diseñado y desplegado soluciones reales que van desde sistemas de reserva de pasajes hasta catálogos interactivos.
               </p>
               <p>
-                Mi forma de aprender es construir. Prefiero romper algo real antes que terminar 10 cursos con certificados. La documentación oficial y Stack Overflow son mis mejores amigos.
+                Mi filosofía de aprendizaje se basa en construir proyectos reales y resolver desafíos técnicos desde cero. Estudiar las mejores prácticas de la documentación oficial, escribir código limpio y optimizar el rendimiento de las aplicaciones son las prioridades en mi flujo de trabajo.
               </p>
             </div>
 

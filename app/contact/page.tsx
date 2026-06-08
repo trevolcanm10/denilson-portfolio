@@ -1,4 +1,8 @@
-import { Mail, ExternalLink } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Mail, ExternalLink, Check, Send } from "lucide-react";
 
 const contactLinks = [
   {
@@ -22,8 +26,35 @@ const contactLinks = [
 ];
 
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !email || !message) return;
+
+    setIsSubmitting(true);
+
+    // Simulate sending message
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSent(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      // Hide toast after 4 seconds
+      setTimeout(() => {
+        setIsSent(false);
+      }, 4000);
+    }, 1500);
+  };
+
   return (
-    <main className="mx-auto max-w-5xl px-6 py-24">
+    <main className="mx-auto max-w-5xl px-6 py-24 relative">
       <div className="max-w-2xl mb-16">
         <h1 className="text-4xl md:text-5xl font-bold">
           Contacto
@@ -60,7 +91,7 @@ export default function ContactPage() {
         <h2 className="text-2xl font-bold mb-6">
           Envíame un mensaje
         </h2>
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
               htmlFor="name"
@@ -71,7 +102,11 @@ export default function ContactPage() {
             <input
               type="text"
               id="name"
-              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50"
               placeholder="Tu nombre"
             />
           </div>
@@ -86,7 +121,11 @@ export default function ContactPage() {
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50"
               placeholder="tu@email.com"
             />
           </div>
@@ -100,20 +139,59 @@ export default function ContactPage() {
             </label>
             <textarea
               id="message"
+              required
               rows={5}
-              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              disabled={isSubmitting}
+              className="w-full px-4 py-2 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none disabled:opacity-50"
               placeholder="Cuéntame sobre tu proyecto..."
             />
           </div>
 
           <button
             type="submit"
-            className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition"
+            disabled={isSubmitting}
+            className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
           >
-            Enviar mensaje
+            {isSubmitting ? (
+              <>
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+                  className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full"
+                />
+                Enviando...
+              </>
+            ) : (
+              <>
+                <Send className="w-4 h-4" />
+                Enviar mensaje
+              </>
+            )}
           </button>
         </form>
       </div>
+
+      {/* Success Toast */}
+      <AnimatePresence>
+        {isSent && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-6 right-6 z-50 flex items-center gap-3 p-4 rounded-xl border bg-card shadow-lg text-foreground max-w-sm"
+          >
+            <div className="p-1.5 rounded-full bg-emerald-500/10 text-emerald-500 shrink-0">
+              <Check className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="font-semibold text-sm">¡Mensaje enviado con éxito!</p>
+              <p className="text-xs text-muted-foreground">Gracias por escribir, te responderé pronto.</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
