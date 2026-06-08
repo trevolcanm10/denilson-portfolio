@@ -79,6 +79,8 @@ export function Navbar() {
               fill
               sizes="32px"
               className="object-cover"
+              priority
+              loading="eager"
             />
           </div>
           Denilson
