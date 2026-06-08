@@ -87,9 +87,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col text-foreground">
         <ThemeProvider>
-          {/* Background layers */}
+          {/* Global background layers */}
+          <div className="pointer-events-none fixed inset-0 z-0 bg-background" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-dot-grid" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-grid-glow" />
 
