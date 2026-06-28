@@ -12,61 +12,66 @@ export function Hero() {
       {/* C1: Partículas decorativas */}
       <FloatingParticles count={16} />
 
-      <div className="max-w-3xl text-center space-y-10 relative z-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative z-10">
+        <div className="flex flex-col text-center md:text-left space-y-6">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-sm text-muted-foreground font-medium uppercase tracking-wider"
+          >
+            Desarrollador Full Stack & Especialista en Machine Learning
+          </motion.div>
+
+          {/* Title con B2: split text */}
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+            <SplitText
+              text="Construyendo aplicaciones y datos"
+              as="span"
+              initial
+              delay={0.2}
+              stagger={0.04}
+              className="block"
+            />
+            <span className="text-gradient-pan block sm:inline">
+              {" "}con inteligencia
+            </span>
+          </h1>
+
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            Ingeniero de Software enfocado en el desarrollo web robusto, dashboards interactivos y modelos predictivos de Machine Learning. Transformo datos complejos en soluciones reales.
+          </motion.p>
+        </div>
+        
         {/* Avatar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className = "flex justify-center"
         >
-          <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-border avatar-glow">
-            <Image
-              src="/avatar.png"
-              alt="Denilson Morales"
-              fill
-              sizes="(max-width: 768px) 112px, 128px"
-              className="object-cover"
-              priority
-            />
+          <div id="avatar-frame" className="relative w-64 h-80 md:w-80 md:h-96">
+            {/* Marco técnico */}
+            <div className="absolute inset-0 translate-x-4 translate-y-4 border border-primary" />
+            {/* Contenedor imagen*/}
+            <div className="relative w-full  h-full overflow-hidden border border-primary bg-card">
+
+              <Image
+                src="/avatar.png"
+                alt="Denilson Morales"
+                fill
+                className="object-cover grayscale brightness-110"
+              />
+            </div>
           </div>
         </motion.div>
 
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-sm text-muted-foreground font-medium uppercase tracking-wider"
-        >
-          Desarrollador Full Stack & Especialista en Machine Learning
-        </motion.div>
-
-        {/* Title con B2: split text */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-          <SplitText
-            text="Construyendo aplicaciones y datos"
-            as="span"
-            initial
-            delay={0.2}
-            stagger={0.04}
-            className="block"
-          />
-          <span className="text-gradient-pan block sm:inline">
-            {" "}con inteligencia
-          </span>
-        </h1>
-
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed"
-        >
-          Ingeniero de Software enfocado en el desarrollo web robusto, dashboards interactivos y modelos predictivos de Machine Learning. Transformo datos complejos en soluciones reales.
-        </motion.p>
-
+        
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}

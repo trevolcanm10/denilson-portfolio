@@ -50,38 +50,38 @@
 
 /* ─── Light Theme ─── */
 :root {
-  --background: #F1F3E9;
-  --foreground: #1A2419;
-  --card: #E4E9DC;
-  --card-foreground: #1A2419;
-  --popover: #E4E9DC;
-  --popover-foreground: #1A2419;
-  --primary: #2D422C;
-  --primary-foreground: #F1F3E9;
-  --secondary: #E4E9DC;
-  --secondary-foreground: #1A2419;
-  --muted: #E4E9DC;
-  --muted-foreground: #5A6E58;
-  --accent: #786043;
-  --accent-foreground: #F1F3E9;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #D8DCC8;
-  --input: #D8DCC8;
-  --ring: oklch(0.50 0.18 170);
-  --chart-1: oklch(0.50 0.18 170);
-  --chart-2: oklch(0.60 0.15 170);
-  --chart-3: oklch(0.70 0.10 170);
-  --chart-4: oklch(0.80 0.06 170);
-  --chart-5: oklch(0.88 0.03 170);
+  --background: #f9f9f7;
+  --foreground: #1a1c1b;
+  --card: #f4f4f2;
+  --card-foreground: #1a1c1b;
+  --popover: #ffffff;
+  --popover-foreground: #1a1c1b;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #c8e5e5;
+  --secondary-foreground: #1a1c1b;
+  --muted: #eeeeec;
+  --muted-foreground: #444748;
+  --accent: #486363;
+  --accent-foreground: #ffffff;
+  --destructive: #ba1a1a;
+  --border: #c4c7c7;
+  --input: #e2e3e1;
+  --ring: #5f5e5e;
+  --chart-1: #486363;
+  --chart-2: #76859b;
+  --chart-3: #c8e5e5;
+  --chart-4: #e2e3e1;
+  --chart-5: #f4f4f2;
   --radius: 0.75rem;
-  --sidebar: oklch(0.985 0.003 170);
-  --sidebar-foreground: oklch(0.13 0.02 170);
-  --sidebar-primary: oklch(0.50 0.18 170);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.955 0.015 170);
-  --sidebar-accent-foreground: oklch(0.20 0.02 170);
-  --sidebar-border: oklch(0.91 0.012 170);
-  --sidebar-ring: oklch(0.50 0.18 170);
+  --sidebar: #eeeeec;
+  --sidebar-foreground: #1a1c1b;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #c8e5e5;
+  --sidebar-accent-foreground: #1a1c1b;
+  --sidebar-border: #c4c7c7;
+  --sidebar-ring: #5f5e5e;
 
   /* Custom shadows for light mode */
   --shadow-card: 0 1px 3px oklch(0.13 0.02 170 / 0.04),
