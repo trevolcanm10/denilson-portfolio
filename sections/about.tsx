@@ -1,7 +1,6 @@
 "use client";
 
 import { GraduationCap, Briefcase, BookOpen, Rocket } from "lucide-react";
-import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 const infoCards = [
   {
@@ -30,15 +29,13 @@ export function About() {
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <FadeIn>
-          <div className="space-y-2 mb-6">
-            <p className="text-sm text-primary font-medium">Sobre mí</p>
-            <h2 className="text-3xl font-bold">Un poco de contexto</h2>
-          </div>
-        </FadeIn>
+        <div className="space-y-2 mb-6">
+          <p className="text-sm text-primary font-medium">Sobre mí</p>
+          <h2 className="text-3xl font-bold">Un poco de contexto</h2>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <FadeIn delay={0.1} className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p>
               Soy <span className="text-foreground font-medium">Denilson Morales</span>, estudiante de Ingeniería de Software. Me apasiona resolver problemas lógicos complejos, diseñar flujos de usuario intuitivos y estructurar arquitecturas de datos limpias.
             </p>
@@ -48,13 +45,13 @@ export function About() {
             <p>
               Mi filosofía de aprendizaje se basa en construir proyectos reales y resolver desafíos técnicos desde cero. Estudiar las mejores prácticas de la documentación oficial, escribir código limpio y optimizar el rendimiento de las aplicaciones son las prioridades en mi flujo de trabajo.
             </p>
-          </FadeIn>
+          </div>
 
-          <StaggerContainer className="space-y-4" stagger={0.1}>
+          <div className="space-y-4">
             {infoCards.map((card) => {
               const Icon = card.icon;
               return (
-                <StaggerItem key={card.title}>
+                <div key={card.title}>
                   <div className="p-5 rounded-xl border-2 border-border bg-card hover-lift cursor-default">
                     <div className="flex items-center gap-3 mb-2">
                       <Icon className="w-5 h-5 text-primary" />
@@ -64,10 +61,10 @@ export function About() {
                       {card.description}
                     </p>
                   </div>
-                </StaggerItem>
+                </div>
               );
             })}
-          </StaggerContainer>
+          </div>
         </div>
       </div>
     </section>

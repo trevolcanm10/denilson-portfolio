@@ -1,6 +1,5 @@
 "use client";
 
-import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 const experiences = [
   {
@@ -39,15 +38,15 @@ export function Experience() {
   return (
     <section className="py-20 px-4 bg-muted/30">
       <div className="max-w-4xl mx-auto">
-        <FadeIn className="mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl font-bold">
             Trayectoria <span className="text-gradient">& Experiencia</span>
           </h2>
-        </FadeIn>
+        </div>
 
-        <StaggerContainer className="space-y-8" stagger={0.12}>
+        <div className="space-y-8">
           {experiences.map((exp) => (
-            <StaggerItem key={exp.title}>
+            <div key={exp.title}>
               <div className="relative pl-8 border-l-2 border-primary/20 hover:border-primary/50 transition-colors group">
                 {/* Timeline dot with hover scaling */}
                 <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-background group-hover:scale-125 transition-all duration-300" />
@@ -75,9 +74,9 @@ export function Experience() {
                   </ul>
                 </div>
               </div>
-            </StaggerItem>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 "use client";
 
 import { Hammer, BookOpen, MapPin, Target } from "lucide-react";
-import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 const currentItems = [
   {
@@ -30,16 +29,16 @@ export function Currently() {
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        <FadeIn className="mb-8">
+        <div className="mb-8">
           <h2 className="text-3xl font-bold">Ahora mismo</h2>
-        </FadeIn>
+        </div>
 
         <div className="p-6 rounded-2xl border glass-card hover-lift hover:border-primary/40 hover:shadow-card-hover">
-          <StaggerContainer className="grid gap-5" stagger={0.08}>
+          <div className="grid gap-5">
             {currentItems.map((item) => {
               const Icon = item.icon;
               return (
-                <StaggerItem key={item.label}>
+                <div key={item.label}>
                   <div className="flex items-start gap-4">
                     <Icon className="w-5 h-5 text-primary mt-0.5" />
                     <div>
@@ -49,10 +48,10 @@ export function Currently() {
                       <p className="text-foreground font-medium">{item.value}</p>
                     </div>
                   </div>
-                </StaggerItem>
+                </div>
               );
             })}
-          </StaggerContainer>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 "use client";
 
 import { skills } from "@/data/skills";
-import { StaggerContainer, StaggerItem, FadeIn } from "@/components/shared/fade-in";
 
 export function Skills() {
   return (
@@ -9,23 +8,20 @@ export function Skills() {
       <div className="max-w-6xl mx-auto space-y-12">
 
         {/* Title */}
-        <FadeIn className="text-center space-y-2">
+        <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold">Mis <span className="text-gradient">Tecnologías</span></h2>
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
             Herramientas y tecnologías que uso para construir soluciones robustas e inteligentes
           </p>
-        </FadeIn>
+        </div>
 
         {/* Grid */}
-        <StaggerContainer
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          stagger={0.08}
-        >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill) => {
             const Icon = skill.icon;
 
             return (
-              <StaggerItem key={skill.category}>
+              <div key={skill.category}>
                 <div className="p-5 rounded-2xl border glass-card hover-lift hover:border-primary/40 cursor-default h-full group">
                   {/* Header */}
                   <div className="flex items-center gap-3 mb-4">
@@ -49,10 +45,10 @@ export function Skills() {
                     ))}
                   </div>
                 </div>
-              </StaggerItem>
+              </div>
             );
           })}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
