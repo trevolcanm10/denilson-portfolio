@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/layout/footer";
+import { MotionConfig } from "framer-motion";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 
 
@@ -97,6 +98,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col text-foreground">
         <ThemeProvider>
+          <MotionConfig reducedMotion="user">
           {/* B4: Scroll progress bar */}
           <ScrollProgress />
 
@@ -110,6 +112,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </div>
+        </MotionConfig>
         </ThemeProvider>
       </body>
     </html>

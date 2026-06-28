@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SplitText } from "@/components/shared/split-text";
-import { FloatingParticles } from "@/components/shared/floating-particles";
 import { AvatarFrame } from "@/components/shared/avatar-frame";
 import { StatusBadge } from "@/components/shared/status-badge";
 export function Hero() {
@@ -21,7 +20,6 @@ export function Hero() {
   "
 >
       {/* C1: Partículas decorativas */}
-      <FloatingParticles count={16} />
 
       <div
  className="

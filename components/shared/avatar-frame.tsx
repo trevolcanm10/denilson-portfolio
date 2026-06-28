@@ -54,6 +54,7 @@ export function AvatarFrame() {
           <Image
             src="/avatar.png"
             alt="Denilson Morales"
+            sizes="(max-width: 768px) 256px, 320px"
             fill
             className="object-cover grayscale brightness-110"
             priority
