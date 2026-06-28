@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { SplitText } from "@/components/shared/split-text";
 import { AvatarFrame } from "@/components/shared/avatar-frame";
 import { StatusBadge } from "@/components/shared/status-badge";
 export function Hero() {
@@ -39,14 +38,7 @@ export function Hero() {
 
           {/* Title con B2: split text */}
           <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
-            <SplitText
-              text="Construyendo aplicaciones y datos"
-              as="span"
-              initial
-              delay={0.2}
-              stagger={0.04}
-              className="block"
-            />
+            Construyendo aplicaciones y datos
             <span className="italic font-light">
               {" "}con inteligencia
             </span>
