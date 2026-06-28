@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
-import { AuroraBg } from "@/components/shared/aurora-bg";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -104,8 +104,6 @@ export default function RootLayout({
           <div className="pointer-events-none fixed inset-0 z-0 bg-background" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-dot-grid" />
           <div className="pointer-events-none fixed inset-0 z-0 bg-grid-glow" />
-          {/* C2: Aurora animada */}
-          <AuroraBg />
 
           {/* Content wrapper */}
           <div className="relative z-10 flex flex-col min-h-screen w-full">

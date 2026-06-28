@@ -28,7 +28,7 @@ const infoCards = [
 
 export function About() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <FadeIn>
           <div className="space-y-2 mb-6">

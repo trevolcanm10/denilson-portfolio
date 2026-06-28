@@ -87,40 +87,6 @@ export function Hero() {
               Contactarme
             </Link>
           </motion.div>
-
-
-          {/* Social links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="flex items-center justify-start gap-4 pt-2"
-          >
-            <a
-              href="https://github.com/trevolcanm10"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground link-underline transition-colors"
-            >
-              GitHub
-            </a>
-            <span className="text-muted-foreground">·</span>
-            <a
-              href="https://linkedin.com/in/denilson"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground link-underline transition-colors"
-            >
-              LinkedIn
-            </a>
-            <span className="text-muted-foreground">·</span>
-            <a
-              href="mailto:denilson@example.com"
-              className="text-muted-foreground hover:text-foreground link-underline transition-colors"
-            >
-              Email
-            </a>
-          </motion.div>
         </div>
         
         {/* Avatar */}

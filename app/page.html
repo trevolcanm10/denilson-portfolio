@@ -1,123 +1,135 @@
 <!doctype html>
-
 <html class="light" lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>D.MORALES | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <title>Denilson Morales | F.Stack &amp; ML Portfolio</title>
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&amp;family=Inter:wght@100..900&amp;family=Space+Grotesk:wght@100..900&amp;display=swap"
-      rel="stylesheet"
-    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "error-container": "#ffdad6",
-              "outline-variant": "#c4c7c7",
-              "surface-container": "#eeeeec",
-              "on-error-container": "#93000a",
-              "surface-container-high": "#e8e8e6",
-              "on-primary-fixed-variant": "#474746",
-              surface: "#f9f9f7",
-              "on-surface": "#1a1c1b",
-              "on-background": "#1a1c1b",
+              "surface-variant": "#e7e2dc",
+              "surface-tint": "#59605b",
+              tertiary: "#8f4d17", // Burnished Copper
+              "secondary-fixed": "#e4e2de",
+              "on-surface": "#1d1b18",
               "surface-container-lowest": "#ffffff",
-              "surface-bright": "#f9f9f7",
-              "surface-container-highest": "#e2e3e1",
-              background: "#f9f9f7",
-              "on-tertiary-fixed": "#0d1c2e",
-              "tertiary-fixed": "#d4e4fc",
-              "surface-variant": "#e2e3e1",
-              "inverse-on-surface": "#f1f1ef",
-              "on-primary-container": "#858383",
-              "on-tertiary-fixed-variant": "#39485c",
-              "on-primary": "#ffffff",
-              "secondary-container": "#c8e5e5",
-              "on-surface-variant": "#444748",
-              outline: "#747878",
-              secondary: "#486363",
-              "secondary-fixed-dim": "#afcccc",
-              primary: "#000000",
-              "tertiary-fixed-dim": "#b8c8e0",
-              tertiary: "#000000",
-              error: "#ba1a1a",
-              "primary-fixed-dim": "#c8c6c5",
-              "inverse-primary": "#c8c6c5",
-              "tertiary-container": "#0d1c2e",
-              "on-tertiary-container": "#76859b",
-              "surface-container-low": "#f4f4f2",
-              "surface-tint": "#5f5e5e",
-              "on-secondary-container": "#4d6767",
-              "on-primary-fixed": "#1c1b1b",
-              "primary-container": "#1c1b1b",
-              "on-error": "#ffffff",
-              "surface-dim": "#dadad8",
-              "on-secondary-fixed": "#031f20",
-              "secondary-fixed": "#cbe8e8",
-              "on-secondary-fixed-variant": "#314b4b",
-              "primary-fixed": "#e5e2e1",
               "on-secondary": "#ffffff",
-              "inverse-surface": "#2f3130",
               "on-tertiary": "#ffffff",
+              background: "#fef8f2",
+              "surface-container-high": "#ece7e1",
+              "surface-container": "#f2ede7",
+              primary: "#59605b", // Nordic Sage Tone
+              "on-background": "#1d1b18",
+              "surface-bright": "#fef8f2",
+              "secondary-fixed-dim": "#c8c6c3",
+              "surface-container-low": "#f8f3ed",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#f5f0ea",
+              "surface-container-highest": "#e7e2dc",
+              "primary-fixed-dim": "#c1c8c3",
+              "surface-dim": "#ded9d3",
+              "outline-variant": "#c4c7c3",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#32302c",
+              "tertiary-fixed": "#ffdcc6",
+              "primary-container": "#e1e8e2", // Nordic Sage Base
+              "on-primary-container": "#616864",
+              "on-tertiary-container": "#99551f",
+              "on-secondary-fixed": "#1b1c1a",
+              "on-secondary-fixed-variant": "#474744",
+              "tertiary-fixed-dim": "#ffb785",
+              "primary-fixed": "#dde4de",
+              outline: "#747875",
+              secondary: "#5e5e5c",
+              error: "#ba1a1a",
+              "on-surface-variant": "#434845",
+              "on-secondary-container": "#636360",
+              "on-primary-fixed-variant": "#414844",
+              "secondary-container": "#e1dfdc",
+              "on-tertiary-fixed-variant": "#713700",
+              "on-primary-fixed": "#161d1a",
+              "on-error": "#ffffff",
+              "tertiary-container": "#ffe0cd",
+              "on-error-container": "#93000a",
+              surface: "#fef8f2", // Warm Oat Base
+              "on-tertiary-fixed": "#301400",
+              "inverse-primary": "#c1c8c3",
             },
             borderRadius: {
               DEFAULT: "0.25rem",
               lg: "0.5rem",
               xl: "0.75rem",
+              "2xl": "16px",
               full: "9999px",
             },
             spacing: {
-              "margin-page": "48px",
-              gutter: "24px",
-              "container-max": "1200px",
               unit: "4px",
+              gutter: "24px",
+              lg: "24px",
+              sm: "8px",
+              xl: "40px",
+              "margin-desktop": "48px",
+              xxl: "64px",
+              md: "16px",
+              "margin-mobile": "16px",
+              xs: "4px",
             },
             fontFamily: {
-              "body-lg": ["Inter"],
-              "code-md": ["Geist Mono"],
-              "label-sm": ["Geist Mono"],
-              "headline-lg": ["Space Grotesk"],
-              "headline-xl": ["Space Grotesk"],
-              "body-md": ["Inter"],
-              "headline-md": ["Space Grotesk"],
+              "body-lg": ["Geist"],
+              "body-md": ["Geist"],
+              "headline-lg": ["Geist"],
+              display: ["Geist"],
+              "headline-md": ["Geist"],
+              "label-md": ["JetBrains Mono"],
+              "label-sm": ["JetBrains Mono"],
             },
             fontSize: {
               "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-              "code-md": ["14px", { lineHeight: "1.5", fontWeight: "500" }],
-              "label-sm": [
-                "12px",
-                { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" },
-              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
               "headline-lg": [
                 "32px",
                 {
                   lineHeight: "1.2",
                   letterSpacing: "-0.01em",
-                  fontWeight: "600",
+                  fontWeight: "400",
                 },
               ],
-              "headline-xl": [
+              display: [
                 "48px",
                 {
                   lineHeight: "1.1",
                   letterSpacing: "-0.02em",
-                  fontWeight: "700",
+                  fontWeight: "300",
                 },
               ],
-              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-sm": ["12px", { lineHeight: "1.2", fontWeight: "500" }],
             },
           },
         },
@@ -125,24 +137,9 @@
     </script>
     <style>
       body {
-        background-color: #f8f9fa;
+        background-color: #e1e8e2;
+        color: #1d1b18;
         scroll-behavior: smooth;
-      }
-      .technical-border {
-        border: 1px solid #e2e8f0;
-      }
-      .glass-blur {
-        backdrop-filter: blur(8px);
-        background: rgba(255, 255, 255, 0.7);
-      }
-      .skill-pill {
-        border: 1px solid #e2e8f0;
-        transition: all 0.2s ease;
-      }
-      .skill-pill:hover {
-        border-color: #000000;
-        background: #000000;
-        color: white;
       }
       .material-symbols-outlined {
         font-variation-settings:
@@ -151,795 +148,453 @@
           "GRAD" 0,
           "opsz" 24;
       }
-      .shimmer {
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.4) 50%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        background-size: 200% 100%;
-        animation: shimmer 2s infinite;
+      .satin-copper {
+        background: linear-gradient(180deg, #8f4d17 0%, #7a4114 100%);
       }
-      @keyframes shimmer {
-        0% {
-          background-position: -200% 0;
-        }
-        100% {
-          background-position: 200% 0;
-        }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
       }
-      .timeline-line {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 1px;
-        background: #e2e8f0;
-      }
-      .timeline-dot {
-        width: 9px;
-        height: 9px;
-        border: 1px solid #000;
-        background: #fff;
-        position: absolute;
-        left: -4px;
-        top: 4px;
+      .nordic-border {
+        border: 1px solid #d1d9d2;
       }
     </style>
   </head>
-  <body class="font-body-md text-on-background">
-    <!-- Interactive Background Shader -->
-    <!-- STITCH_SHADER_START:ANIMATION_31 class="fixed inset-0 w-full h-full opacity-40 pointer-events-none z-0" -->
-    <div
-      class="fixed inset-0 w-full h-full opacity-40 pointer-events-none z-0"
-      style="display: block"
-    >
-      <canvas
-        id="shader-canvas-ANIMATION_31"
-        style="display: block; width: 100%; height: 100%"
-      ></canvas>
-      <script>
-        (function () {
-          const canvas = document.getElementById("shader-canvas-ANIMATION_31");
-
-          // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
-          // This fires on initial layout and whenever the element is resized.
-          function syncSize() {
-            const w = canvas.clientWidth || 1280;
-            const h = canvas.clientHeight || 720;
-            if (canvas.width !== w || canvas.height !== h) {
-              canvas.width = w;
-              canvas.height = h;
-            }
-          }
-          if (typeof ResizeObserver !== "undefined") {
-            new ResizeObserver(syncSize).observe(canvas);
-          }
-          syncSize();
-
-          const gl =
-            canvas.getContext("webgl") ||
-            canvas.getContext("experimental-webgl");
-          if (!gl) return;
-          const vs = `attribute vec2 a_position;
-varying vec2 v_texCoord;
-void main() {
-  v_texCoord = a_position * 0.5 + 0.5;
-  gl_Position = vec4(a_position, 0.0, 1.0);
-}`;
-          const fs = `precision highp float;
-varying vec2 v_texCoord;
-uniform float u_time;
-uniform vec2 u_resolution;
-uniform vec2 u_mouse;
-
-float hash(vec2 p) {
-    p = fract(p * vec2(123.34, 456.21));
-    p += dot(p, p + 45.32);
-    return fract(p.x * p.y);
-}
-
-vec2 get_point(vec2 id, float seed) {
-    float h = hash(id + seed);
-    return vec2(sin(u_time * 0.2 + h * 6.28), cos(u_time * 0.15 + h * 6.28)) * 0.4 + 0.5;
-}
-
-void main() {
-    vec2 uv = v_texCoord;
-    vec2 m = u_mouse / u_resolution;
-    
-    // Scale for grid
-    vec2 g_uv = uv * 12.0;
-    vec2 id = floor(g_uv);
-    vec2 f_uv = fract(g_uv);
-    
-    float minDist = 1.0;
-    
-    // Background colors (Light mode warm oat/gray)
-    vec3 bgColor = vec3(0.97, 0.97, 0.95); // F8F9FA-ish
-    vec3 lineColor = vec3(0.8, 0.8, 0.82); // Muted gray/slate
-    
-    for(int y = -1; y <= 1; y++) {
-        for(int x = -1; x <= 1; x++) {
-            vec2 neighbor = vec2(float(x), float(y));
-            vec2 p = get_point(id + neighbor, 13.0);
-            vec2 diff = neighbor + p - f_uv;
-            float dist = length(diff);
-            minDist = min(minDist, dist);
-            
-            // Mouse interaction
-            float m_dist = length((id + neighbor + p) / 12.0 - m);
-            if(m_dist < 0.15) {
-                float force = smoothstep(0.15, 0.0, m_dist);
-                minDist = mix(minDist, dist * 0.5, force);
-            }
-        }
-    }
-    
-    vec3 color = bgColor;
-    
-    // Draw micro-dots
-    float points = smoothstep(0.04, 0.0, minDist);
-    color = mix(color, lineColor, points * 0.4);
-    
-    // Subtle radial connection hint
-    color = mix(color, lineColor, (1.0 - smoothstep(0.0, 0.5, minDist)) * 0.05);
-
-    gl_FragColor = vec4(color, 1.0);
-}`;
-          function cs(type, src) {
-            const s = gl.createShader(type);
-            gl.shaderSource(s, src);
-            gl.compileShader(s);
-            return s;
-          }
-          const prog = gl.createProgram();
-          gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
-          gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
-          gl.linkProgram(prog);
-          gl.useProgram(prog);
-          const buf = gl.createBuffer();
-          gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-          gl.bufferData(
-            gl.ARRAY_BUFFER,
-            new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
-            gl.STATIC_DRAW,
-          );
-          const pos = gl.getAttribLocation(prog, "a_position");
-          gl.enableVertexAttribArray(pos);
-          gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
-          const uTime = gl.getUniformLocation(prog, "u_time");
-          const uRes = gl.getUniformLocation(prog, "u_resolution");
-          const uMouse = gl.getUniformLocation(prog, "u_mouse");
-
-          // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
-          // Shaders that need normalized coords should use: u_mouse / u_resolution.
-          let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
-          window.addEventListener("mousemove", (event) => {
-            const rect = canvas.getBoundingClientRect();
-            if (rect.width && rect.height) {
-              const nx = (event.clientX - rect.left) / rect.width;
-              const ny = 1.0 - (event.clientY - rect.top) / rect.height;
-              mouse.x = nx * canvas.width;
-              mouse.y = ny * canvas.height;
-            }
-          });
-
-          function render(t) {
-            if (typeof ResizeObserver === "undefined") syncSize();
-            gl.viewport(0, 0, canvas.width, canvas.height);
-            if (uTime) gl.uniform1f(uTime, t * 0.001);
-            if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
-            if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
-            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-            requestAnimationFrame(render);
-          }
-          render(0);
-        })();
-      </script>
-    </div>
-    <!-- STITCH_SHADER_END:ANIMATION_31 -->
-    <!-- Top Navigation -->
+  <body
+    class="font-body-md antialiased selection:bg-tertiary selection:text-white"
+  >
+    <!-- TopNavBar -->
     <header
-      class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant"
+      class="w-full sticky top-0 z-50 bg-primary-container border-b border-outline-variant"
     >
       <nav
-        class="flex justify-between items-center h-16 px-margin-page max-w-container-max mx-auto"
+        class="flex justify-between items-center max-w-[1200px] mx-auto px-margin-desktop py-md"
       >
         <span
-          class="font-headline-md text-headline-md font-bold tracking-tighter text-primary"
-          >D.MORALES</span
+          class="font-headline-md text-headline-md font-bold tracking-tight text-on-background"
+          >F.Stack &amp; ML</span
         >
-        <div class="hidden md:flex gap-8">
+        <div class="hidden md:flex gap-xl">
           <a
-            class="text-primary font-bold border-b-2 border-primary pb-1"
+            class="font-body-lg text-body-lg text-primary border-b-2 border-tertiary pb-1 cursor-pointer active:opacity-70 transition-all duration-300"
             href="#home"
             >Home</a
           >
           <a
-            class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200"
-            href="#skills"
-            >Skills</a
+            class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary cursor-pointer active:opacity-70 transition-all duration-300"
+            href="#about"
+            >About</a
           >
           <a
-            class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200"
-            href="#experience"
-            >Experience</a
-          >
-          <a
-            class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200"
+            class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary cursor-pointer active:opacity-70 transition-all duration-300"
             href="#projects"
             >Projects</a
           >
+          <a
+            class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary cursor-pointer active:opacity-70 transition-all duration-300"
+            href="#experience"
+            >Experience</a
+          >
         </div>
         <button
-          class="bg-primary text-on-primary px-6 py-2 rounded-none font-label-sm uppercase hover:bg-secondary transition-colors duration-200"
+          class="font-label-md text-label-md px-md py-sm bg-tertiary text-white rounded-xl hover:opacity-90 transition-all"
         >
-          Hire Me
+          Connect
         </button>
       </nav>
     </header>
-    <main class="relative z-10">
+    <main class="max-w-[1200px] mx-auto px-margin-desktop space-y-xxl pb-xxl">
       <!-- Hero Section -->
       <section
-        class="min-h-[819px] flex flex-col justify-center px-margin-page max-w-container-max mx-auto py-24"
+        class="pt-xxl grid grid-cols-1 md:grid-cols-12 items-center gap-xl"
         id="home"
       >
-        <div class="flex flex-col md:flex-row items-center gap-16">
-          <div class="flex-1 space-y-8">
-            <div
-              class="inline-flex items-center gap-3 px-3 py-1 border border-outline-variant bg-surface-container-low"
-            >
-              <span class="relative flex h-2 w-2">
-                <span
-                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
-                ></span>
-                <span
-                  class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
-                ></span>
-              </span>
-              <span
-                class="font-label-sm text-label-sm text-on-surface-variant uppercase"
-                >[STATUS: AVAILABLE FOR CONTRACTS]</span
-              >
-            </div>
-            <h1
-              class="font-headline-xl text-headline-xl text-primary leading-none tracking-tighter"
-            >
-              Construyendo aplicaciones y datos con
-              <span class="italic font-light">inteligencia</span>.
-            </h1>
-            <p
-              class="font-body-lg text-body-lg text-on-surface-variant max-w-xl"
-            >
-              Especialista en Software y Machine Learning con enfoque en rigor
-              técnico y estética minimalista. Transformando flujos de datos
-              complejos en experiencias de usuario coherentes.
-            </p>
-          </div>
-          <div
-            class="relative w-64 h-84 md:w-80 md:h-96 shrink-0"
-            id="avatar-frame"
+        <div class="md:col-span-8">
+          <h1 class="font-display text-display mb-lg leading-tight">
+            Construyendo aplicaciones y datos con
+            <span class="text-tertiary italic font-normal">inteligencia</span>
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-xl"
           >
-            <div
-              class="absolute inset-0 border border-primary translate-x-4 translate-y-4 -z-10"
-            ></div>
-            <div
-              class="w-full h-full border border-primary overflow-hidden bg-surface-container-highest flex items-center justify-center"
+            Portafolio de Denilson Morales. Especializado en el nexo entre el
+            desarrollo Full-Stack moderno y el aprendizaje automático
+            predictivo.
+          </p>
+          <div class="flex flex-wrap gap-md">
+            <a
+              class="px-xl py-md satin-copper text-white rounded-2xl font-body-md hover:scale-[1.02] transition-transform duration-300 shadow-sm"
+              href="#projects"
             >
-              <img
-                class="w-full h-full object-cover grayscale brightness-110"
-                data-alt="A professional, high-contrast studio portrait of a software engineer of Hispanic descent with short hair and a clean-shaven face. The lighting is dramatic, high-key, highlighting the facial structure against a neutral gray background. The engineering-aesthetic is reinforced by the crisp 1px borders and minimalist light-mode environment."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmYcMtVNBlNts_amwshvLnsbMfKzuNib_JTMYq7ZwjX6sEDvcWhJy66UoXx8C06Ekw0rJPfZGgssdBaJ0FtjopNgaKGLGgQP2_o4DVbYeJDV3zbjVvke8BGuryz1E4zDEYc5rdncwW_dXuBctoXb9YUGL7fxqv_QopAgJ0T8x-qitVJyA5ZnG8NOb-xLl_xPWFFDfGXAuVs4Z__ZJnbSJj3VHeBYTacnFQ0UtZrxf17ISeXx5FEat_8jk-WS-vFatD5fcYRt4FsFE"
-              />
-            </div>
+              Ver proyectos
+            </a>
+            <a
+              class="px-xl py-md border border-on-surface-variant text-on-surface-variant rounded-2xl font-body-md hover:bg-surface-container transition-colors duration-300"
+              href="#contact"
+            >
+              Contactarme
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-4 flex justify-end">
+          <div class="relative w-64 h-64">
+            <div
+              class="absolute inset-0 border-2 border-tertiary rounded-full -m-2 opacity-30"
+            ></div>
+            <img
+              class="w-full h-full object-cover rounded-full border-4 border-surface shadow-md"
+              data-alt="A professional portrait of a software engineer with a calm and intentional expression. The lighting is soft, natural, and editorial, reflecting a Scandinavian minimalist aesthetic. The background is a clean, Nordic Sage studio wall. The engineer wears high-quality, neutral-toned clothing that complements the Warm Oat and Sage color palette of the UI."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZ4SN1iRoCxBOVEutG_c2y9zCHkQ9xP5GBZswceyDAgqw4Ffn_mLLIJGaUmzc64wl2rnORdkpZay-UJRE0r9hvE3RyVyUPoCH8wqzlCMz4qn-OPyUe5bjWxeORtMmk_5N0Bn0Z7IbcY67CFD_iGU3z8qSv78CEtNZ-o39iIyoqpdmQuLScDAiZNU4TTPDsggpX9v-Od3U97fU7pT7fqfhvGHEJ_z2E2LB99loAvPwlMZWiFWS2pNeABsj_tEyFYOh0YBNZiB7yBk"
+            />
           </div>
         </div>
       </section>
-      <!-- Status Ticker -->
-      <div class="px-margin-page max-w-container-max mx-auto mb-24">
+      <!-- About & Bento Section -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-lg" id="about">
+        <!-- Left: About Me -->
         <div
-          class="glass-blur technical-border py-4 px-8 flex flex-col md:flex-row justify-between items-center gap-6 overflow-hidden"
+          class="md:col-span-5 bg-surface p-xl rounded-2xl nordic-border flex flex-col justify-center"
         >
-          <div class="flex items-center gap-4">
-            <span class="font-label-sm text-primary">CONSTRUYENDO:</span>
-            <span class="font-code-md text-code-md text-on-surface-variant"
-              >Sistema predictivo de ansiedad v2</span
+          <h2 class="font-headline-md text-headline-md mb-md text-primary">
+            Sobre mí
+          </h2>
+          <p class="text-on-surface-variant leading-relaxed mb-md">
+            Ingeniero apasionado por transformar datos complejos en interfaces
+            intuitivas. Mi enfoque se basa en la simplicidad arquitectónica y la
+            robustez técnica.
+          </p>
+          <div class="flex gap-sm">
+            <span
+              class="font-label-sm text-label-sm px-sm py-xs bg-surface-container nordic-border rounded-lg"
+              >Denilson Morales</span
             >
-          </div>
-          <div class="flex items-center gap-4">
-            <span class="font-label-sm text-primary">APRENDIENDO:</span>
-            <span class="font-code-md text-code-md text-on-surface-variant"
-              >Next.js 16</span
+            <span
+              class="font-label-sm text-label-sm px-sm py-xs bg-surface-container nordic-border rounded-lg"
+              >Full-Stack + ML</span
             >
-          </div>
-          <div class="flex items-center gap-4">
-            <span class="font-label-sm text-primary">UBICACIÓN:</span>
-            <div class="flex items-center gap-2">
-              <span class="font-code-md text-code-md text-on-surface-variant"
-                >Lima, Perú</span
-              >
-              <span
-                class="h-2 w-2 rounded-full bg-amber-500 animate-pulse"
-              ></span>
-            </div>
           </div>
         </div>
-      </div>
-      <!-- Skills Matrix -->
-      <section
-        class="px-margin-page max-w-container-max mx-auto py-24 border-t border-outline-variant"
-        id="skills"
-      >
-        <h2 class="font-headline-lg text-headline-lg mb-16 text-primary">
-          Technical Pillars
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-          <!-- Pillar 1 -->
+        <!-- Right: Now (Bento) -->
+        <div
+          class="md:col-span-7 grid grid-cols-2 grid-rows-2 gap-lg min-h-[350px]"
+        >
           <div
-            class="p-8 bg-surface-container-lowest technical-border flex flex-col h-full"
+            class="col-span-2 bg-surface p-lg rounded-2xl nordic-border relative overflow-hidden group"
           >
-            <span class="font-label-sm mb-6 text-outline">01 / FRONTEND</span>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >React.js</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Next.js</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Tailwind CSS</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >TypeScript</span
+            <div class="flex justify-between items-start">
+              <div>
+                <span
+                  class="font-label-md text-label-md text-tertiary mb-xs block uppercase tracking-widest"
+                  >Ahora mismo</span
+                >
+                <h3 class="font-headline-md text-headline-md">
+                  Sistema predictivo de ansiedad v2
+                </h3>
+              </div>
+              <span class="material-symbols-outlined text-primary-fixed-dim"
+                >analytics</span
               >
             </div>
+            <p class="mt-sm text-on-surface-variant text-body-md opacity-80">
+              Refinando modelos de regresión temporal con FastAPI.
+            </p>
           </div>
-          <!-- Pillar 2 -->
           <div
-            class="p-8 bg-surface-container-lowest technical-border flex flex-col h-full"
+            class="bg-primary-container p-lg rounded-2xl nordic-border flex flex-col justify-end group cursor-pointer hover:bg-surface-variant transition-colors"
           >
-            <span class="font-label-sm mb-6 text-outline">02 / BACKEND</span>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Python</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >FastAPI</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Node.js</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >GraphQL</span
-              >
-            </div>
-          </div>
-          <!-- Pillar 3 -->
-          <div
-            class="p-8 bg-surface-container-lowest technical-border flex flex-col h-full"
-          >
-            <span class="font-label-sm mb-6 text-outline">03 / DATABASE</span>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >PostgreSQL</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >MongoDB</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Redis</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Pinecone</span
-              >
-            </div>
-          </div>
-          <!-- Pillar 4 -->
-          <div
-            class="p-8 bg-surface-container-lowest technical-border flex flex-col h-full"
-          >
-            <span class="font-label-sm mb-6 text-outline"
-              >04 / AI &amp; ML</span
+            <span
+              class="material-symbols-outlined text-on-primary-container mb-md"
+              >code</span
             >
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >PyTorch</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Scikit-learn</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >Pandas</span
-              >
-              <span class="skill-pill px-3 py-1 font-code-md text-label-sm"
-                >NLP</span
-              >
+            <h4
+              class="font-headline-md text-headline-md text-on-primary-container leading-none"
+            >
+              React Server Components
+            </h4>
+          </div>
+          <div
+            class="bg-tertiary-container p-lg rounded-2xl nordic-border flex flex-col justify-center text-center"
+          >
+            <div
+              class="text-on-tertiary-container font-display text-headline-lg"
+            >
+              8+
+            </div>
+            <div class="font-label-sm text-label-sm text-on-tertiary-container">
+              Proyectos ML Desplegados
             </div>
           </div>
         </div>
       </section>
-      <!-- ML Simulator Section -->
-      <section
-        class="px-margin-page max-w-container-max mx-auto py-24 border-t border-outline-variant"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-          <div class="lg:col-span-5 flex flex-col justify-center">
-            <h2 class="font-headline-lg text-headline-lg mb-6">
-              Simulation Sandbox
+      <!-- Skills Section -->
+      <section class="space-y-lg">
+        <div class="flex items-center gap-md">
+          <span class="h-[1px] flex-grow bg-outline-variant"></span>
+          <h2
+            class="font-label-md text-label-md uppercase tracking-[0.2em] text-on-surface-variant"
+          >
+            Stack Tecnológico
+          </h2>
+          <span class="h-[1px] flex-grow bg-outline-variant"></span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-md">
+          <div
+            class="px-md py-sm bg-surface rounded-lg nordic-border flex items-center gap-md"
+          >
+            <span class="font-label-md text-label-md">React / Next.js</span>
+          </div>
+          <div
+            class="px-md py-sm bg-surface rounded-lg nordic-border flex items-center gap-md"
+          >
+            <span class="font-label-md text-label-md">Python</span>
+          </div>
+          <div
+            class="px-md py-sm bg-surface rounded-lg nordic-border flex items-center gap-md"
+          >
+            <span class="font-label-md text-label-md"
+              >scikit-learn / PyTorch</span
+            >
+          </div>
+          <div
+            class="px-md py-sm bg-surface rounded-lg nordic-border flex items-center gap-md"
+          >
+            <span class="font-label-md text-label-md">Tailwind CSS</span>
+          </div>
+          <div
+            class="px-md py-sm bg-surface rounded-lg nordic-border flex items-center gap-md"
+          >
+            <span class="font-label-md text-label-md">FastAPI / Node.js</span>
+          </div>
+        </div>
+      </section>
+      <!-- ML Widget Section -->
+      <section class="bg-surface p-xl rounded-2xl nordic-border">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
+          <div class="md:col-span-4">
+            <span class="font-label-md text-label-md text-tertiary block mb-sm"
+              >Playground Predictor</span
+            >
+            <h2 class="font-headline-md text-headline-md mb-md">
+              ML Premier League
             </h2>
-            <p class="font-body-md text-on-surface-variant mb-8">
-              Experience a real-time inference simulator for my Premier League
-              predictive model. This widget replicates a Jupyter Notebook
-              environment used for testing feature engineering.
+            <p class="text-on-surface-variant text-body-md">
+              Prueba un modelo real entrenado con XGBoost para predecir
+              probabilidades de victoria.
             </p>
-            <div class="space-y-4">
-              <div
-                class="flex items-center gap-4 font-code-md text-label-sm text-secondary"
-              >
-                <span class="material-symbols-outlined">analytics</span>
-                Accuracy: 84.2%
-              </div>
-              <div
-                class="flex items-center gap-4 font-code-md text-label-sm text-secondary"
-              >
-                <span class="material-symbols-outlined">database</span>
-                Dataset: 15 Seasons
-              </div>
-            </div>
           </div>
           <div
-            class="lg:col-span-7 bg-[#EDEEEB] technical-border p-6 font-code-md"
+            class="md:col-span-8 bg-surface-container p-lg rounded-xl space-y-md"
           >
-            <div
-              class="flex items-center justify-between mb-6 pb-4 border-b border-outline-variant"
-            >
-              <div class="flex gap-2">
-                <div class="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
-                <div class="w-3 h-3 rounded-full bg-[#27C93F]"></div>
-              </div>
-              <span class="text-on-surface-variant text-xs opacity-50"
-                >pl_predictor_v1.ipynb</span
-              >
-            </div>
-            <div class="space-y-6">
-              <div class="space-y-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+              <div class="space-y-sm">
                 <label
-                  class="block text-xs uppercase tracking-widest text-outline"
-                  >Selection_Module</label
+                  class="font-label-sm text-label-sm text-on-surface-variant"
+                  >Equipo Local</label
                 >
-                <div class="grid grid-cols-2 gap-4">
-                  <select
-                    class="w-full bg-white border border-outline-variant rounded-none py-2 px-3 text-sm focus:ring-0 focus:border-primary"
-                    id="home-team"
-                  >
-                    <option>Manchester City</option>
-                    <option>Liverpool</option>
-                    <option>Arsenal</option>
-                    <option>Aston Villa</option>
-                  </select>
-                  <select
-                    class="w-full bg-white border border-outline-variant rounded-none py-2 px-3 text-sm focus:ring-0 focus:border-primary"
-                    id="away-team"
-                  >
-                    <option>Arsenal</option>
-                    <option>Tottenham</option>
-                    <option>Chelsea</option>
-                    <option>Man United</option>
-                  </select>
-                </div>
+                <select
+                  class="w-full bg-surface-container-low border-none rounded-lg p-sm font-body-md focus:ring-1 focus:ring-tertiary"
+                >
+                  <option>Manchester City</option>
+                  <option>Arsenal</option>
+                  <option>Liverpool</option>
+                </select>
               </div>
-              <button
-                class="w-full bg-primary text-on-primary py-3 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
-                id="run-prediction"
-              >
-                <span class="material-symbols-outlined text-sm"
-                  >play_arrow</span
+              <div class="space-y-sm">
+                <label
+                  class="font-label-sm text-label-sm text-on-surface-variant"
+                  >Equipo Visitante</label
                 >
-                Run Prediction
-              </button>
-              <div
-                class="hidden animate-in fade-in slide-in-from-top-4 duration-500"
-                id="prediction-output"
-              >
-                <div class="mb-4 text-xs text-secondary">
-                  [LOG] Executing XGBoost inference...
-                </div>
-                <div class="space-y-4">
-                  <div class="relative pt-1">
-                    <div class="flex mb-2 items-center justify-between">
-                      <div class="text-xs font-semibold">HOME WIN</div>
-                      <div class="text-xs font-semibold">42%</div>
-                    </div>
-                    <div
-                      class="overflow-hidden h-2 mb-4 text-xs flex bg-surface-container"
-                    >
-                      <div
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary"
-                        style="width: 42%"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="relative pt-1">
-                    <div class="flex mb-2 items-center justify-between">
-                      <div class="text-xs font-semibold">DRAW</div>
-                      <div class="text-xs font-semibold">18%</div>
-                    </div>
-                    <div
-                      class="overflow-hidden h-2 mb-4 text-xs flex bg-surface-container"
-                    >
-                      <div
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-secondary"
-                        style="width: 18%"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="relative pt-1">
-                    <div class="flex mb-2 items-center justify-between">
-                      <div class="text-xs font-semibold">AWAY WIN</div>
-                      <div class="text-xs font-semibold">40%</div>
-                    </div>
-                    <div
-                      class="overflow-hidden h-2 mb-4 text-xs flex bg-surface-container"
-                    >
-                      <div
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-outline"
-                        style="width: 40%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
+                <select
+                  class="w-full bg-surface-container-low border-none rounded-lg p-sm font-body-md focus:ring-1 focus:ring-tertiary"
+                >
+                  <option>Aston Villa</option>
+                  <option>Chelsea</option>
+                  <option>Tottenham</option>
+                </select>
               </div>
             </div>
+            <button
+              class="w-full py-md satin-copper text-white rounded-xl font-label-md flex justify-center items-center gap-md hover:opacity-90 transition-opacity"
+            >
+              <span class="material-symbols-outlined">query_stats</span>
+              Calcular Probabilidades
+            </button>
           </div>
         </div>
       </section>
-      <!-- Experience Timeline -->
-      <section
-        class="px-margin-page max-w-container-max mx-auto py-24 border-t border-outline-variant"
-        id="experience"
-      >
-        <h2 class="font-headline-lg text-headline-lg mb-16">
-          Technical Journey
+      <!-- Trayectoria Section -->
+      <section class="py-xl" id="experience">
+        <h2 class="font-headline-md text-headline-md mb-xxl text-center">
+          Trayectoria Profesional
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          <div class="md:col-span-8 space-y-16">
-            <!-- Exp Item 1 -->
-            <div class="relative pl-12">
-              <div class="timeline-line"></div>
-              <div class="timeline-dot"></div>
-              <div
-                class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
+        <div class="relative space-y-xl">
+          <!-- Vertical Line -->
+          <div
+            class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-outline-variant md:-translate-x-1/2"
+          ></div>
+          <!-- Entry 1 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="md:text-right pr-md md:pr-xl">
+              <span class="font-label-md text-label-md text-tertiary"
+                >2023 - Presente</span
               >
-                <h3 class="font-headline-md text-headline-md">
-                  Senior Machine Learning Engineer
-                </h3>
-                <span class="font-code-md text-label-sm text-outline"
-                  >2022 — PRESENT</span
-                >
-              </div>
-              <div
-                class="font-label-sm text-primary mb-4 uppercase tracking-widest"
-              >
-                Tech Corp Int.
-              </div>
-              <p class="font-body-md text-on-surface-variant mb-6">
-                Liderando el desarrollo de arquitecturas predictivas para el
-                sector salud. Optimización de latencia en inferencia de modelos
-                NLP en un 40%.
-              </p>
-              <div class="flex gap-4">
-                <div
-                  class="px-4 py-2 bg-surface-container-low border border-outline-variant text-xs"
-                >
-                  <span class="font-bold">+15%</span> Precision Increase
-                </div>
-                <div
-                  class="px-4 py-2 bg-surface-container-low border border-outline-variant text-xs"
-                >
-                  <span class="font-bold">2.4s</span> Inference Speed
-                </div>
-              </div>
-            </div>
-            <!-- Exp Item 2 -->
-            <div class="relative pl-12">
-              <div class="timeline-line"></div>
-              <div class="timeline-dot"></div>
-              <div
-                class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"
-              >
-                <h3 class="font-headline-md text-headline-md">
-                  Full Stack Developer
-                </h3>
-                <span class="font-code-md text-label-sm text-outline"
-                  >2020 — 2022</span
-                >
-              </div>
-              <div
-                class="font-label-sm text-primary mb-4 uppercase tracking-widest"
-              >
-                Digital Solutions S.A.
-              </div>
-              <p class="font-body-md text-on-surface-variant mb-6">
-                Desarrollo de plataformas e-commerce escalables utilizando React
-                y Node.js. Implementación de microservicios con Docker y
-                Kubernetes.
-              </p>
-              <div class="flex gap-4">
-                <div
-                  class="px-4 py-2 bg-surface-container-low border border-outline-variant text-xs"
-                >
-                  <span class="font-bold">50k+</span> Monthly Users
-                </div>
-                <div
-                  class="px-4 py-2 bg-surface-container-low border border-outline-variant text-xs"
-                >
-                  <span class="font-bold">99.9%</span> Uptime
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="md:col-span-4 space-y-12">
-            <div class="p-8 bg-surface-container-low technical-border">
-              <h4 class="font-label-sm uppercase mb-6 text-primary">
-                Certifications
+              <h4 class="font-headline-md text-headline-md">
+                Senior Full-Stack Developer
               </h4>
-              <ul class="space-y-4">
-                <li class="flex items-start gap-3">
-                  <div class="w-1 h-1 bg-secondary mt-1.5 shrink-0"></div>
-                  <div class="font-body-md text-sm">
-                    Deep Learning Specialization - Coursera
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-1 h-1 bg-secondary mt-1.5 shrink-0"></div>
-                  <div class="font-body-md text-sm">
-                    AWS Machine Learning Specialty
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="w-1 h-1 bg-secondary mt-1.5 shrink-0"></div>
-                  <div class="font-body-md text-sm">
-                    Google Cloud Professional Data Engineer
-                  </div>
-                </li>
-              </ul>
+              <p class="text-on-surface-variant text-body-md">
+                Lead en arquitectura de aplicaciones distribuidas y despliegue
+                de microservicios de ML.
+              </p>
             </div>
+            <div class="hidden md:block"></div>
+            <div
+              class="absolute left-[-4px] md:left-1/2 w-2 h-2 rounded-full bg-tertiary md:-translate-x-1/2 top-1"
+            ></div>
+          </div>
+          <!-- Entry 2 -->
+          <div class="relative grid grid-cols-1 md:grid-cols-2 gap-lg">
+            <div class="hidden md:block"></div>
+            <div class="pl-md md:pl-xl">
+              <span class="font-label-md text-label-md text-tertiary"
+                >2021 - 2023</span
+              >
+              <h4 class="font-headline-md text-headline-md">
+                ML Engineer Junior
+              </h4>
+              <p class="text-on-surface-variant text-body-md">
+                Desarrollo de modelos predictivos para análisis de sentimientos
+                y optimización de recursos.
+              </p>
+            </div>
+            <div
+              class="absolute left-[-4px] md:left-1/2 w-2 h-2 rounded-full bg-primary md:-translate-x-1/2 top-1"
+            ></div>
           </div>
         </div>
       </section>
-      <!-- Projects Grid (Bento) -->
-      <section
-        class="px-margin-page max-w-container-max mx-auto py-24 border-t border-outline-variant"
-        id="projects"
-      >
-        <div class="flex justify-between items-end mb-16">
-          <div>
-            <h2 class="font-headline-lg text-headline-lg">Selected Projects</h2>
-            <p class="font-body-md text-on-surface-variant mt-2">
-              A documentation of technical solutions and experimental research.
-            </p>
-          </div>
-          <button
-            class="font-label-sm text-primary flex items-center gap-2 hover:gap-4 transition-all"
+      <!-- Featured Projects -->
+      <section class="space-y-xl" id="projects">
+        <div class="flex justify-between items-end">
+          <h2 class="font-headline-lg text-headline-lg">
+            Proyectos Destacados
+          </h2>
+          <a
+            class="font-label-md text-label-md text-primary flex items-center gap-xs"
+            href="#"
+            >Ver todo
+            <span class="material-symbols-outlined">arrow_right_alt</span></a
           >
-            VIEW ALL ARCHIVE
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </button>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          <!-- Project 1: Anxiety Prediction -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+          <!-- Proy 1 -->
           <div
-            class="md:col-span-7 group relative overflow-hidden technical-border h-[400px]"
+            class="bg-surface rounded-2xl overflow-hidden nordic-border group"
           >
-            <div
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="A clean, clinical dashboard interface for a medical AI application. The visualization features intricate, high-fidelity data charts showing neural activity and biometric stress markers. The color palette is composed of soft whites, pale blues, and deep charcoal, matching the technical minimalist style of the portfolio."
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAcsxGtIInbA85R8PYU_En83WOKiWAysiHLzQG7cJkaEpNRkqEPjttgosjqDuvdjwwZct6gpSgF55aG6HwlZi4CKioNgLcSbAJPfs8OO21zmlEF0ZUX525M5WgNGQD-hoELwaIdZ5mvQ9B9bL66xd7fnQYlFu1dglJXoXp5NQYOi7w1oCzcjbIxYHwb-BeMdIdHYep_dWD8KALSIUf91o0iolJdpb2IW4LepQ5lSfOppZXuuoemFMkGiNa7QMVXv9v-7wkJ8NnrG7Y&quot;);
-              "
-            ></div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-            >
-              <span class="font-label-sm text-surface-container-highest mb-2"
-                >ML / HEALTHCARE</span
-              >
-              <h3 class="font-headline-md text-white">
-                Anxiety Prediction System
-              </h3>
-              <p class="text-surface-container-highest text-sm mt-2 max-w-md">
-                Early detection of stress patterns using multimodal biometric
-                data and LSTM networks.
+            <div class="h-48 relative">
+              <div
+                class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                data-alt="A clean, conceptual visualization of a neural network overlaying a human silhouette, set against a Nordic Sage background. The aesthetic is highly technical yet soft and minimalist, using thin copper lines to represent connections. Soft oat tones provide a gentle, high-end editorial feel."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBjYFpn6baG1Jdd93xfNWT7l3ISW_efESxISrdYblsgb9tBDzBBkGsCxo3prMQeEM_v33NVTmkrF2sUfzDyKpg6G49RcBFRbf0wS5RN3zqTg2EPaxyg-2agIEE8f5bua6j071-1qQWLx3pcrWXOcPxP3z8V2XkD98pY8-vZq-5MCdsUrHYovlP_NPnNz6H3sXelIX-opCtZH15NVCZ4gUA5Tjz9Ud6aLfw_Al2mfvvMTxsbdI24qe6QpyMN4wi3Lrn5oUt8A3I2oDc&quot;);
+                "
+              ></div>
+              <div class="absolute top-md right-md flex gap-xs">
+                <span
+                  class="px-sm py-xs bg-black/10 backdrop-blur-md rounded text-[10px] font-label-md text-white"
+                  >PyTorch</span
+                >
+              </div>
+            </div>
+            <div class="p-lg">
+              <h4 class="font-headline-md text-headline-md mb-xs">
+                Ansiedad Predictor
+              </h4>
+              <p class="text-on-surface-variant text-body-md mb-md">
+                Análisis de patrones biométricos mediante Deep Learning y
+                FastAPI.
               </p>
+              <div class="flex gap-sm">
+                <span class="material-symbols-outlined text-tertiary"
+                  >terminal</span
+                >
+                <span class="material-symbols-outlined text-tertiary"
+                  >database</span
+                >
+              </div>
             </div>
           </div>
-          <!-- Project 2: PL Predictor -->
+          <!-- Proy 2 -->
           <div
-            class="md:col-span-5 group relative overflow-hidden technical-border h-[400px]"
+            class="bg-surface rounded-2xl overflow-hidden nordic-border group"
           >
-            <div
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="A professional sports analytics interface showing a football field schematic with data overlays. Intense vibrant greens of the pitch contrast with sharp, monochrome data nodes and player performance vectors. High-key lighting emphasizes a modern, data-rich aesthetic."
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDBEC0mIXcmu2hOTzXZLT6ByzQnSgsc1PXA1HluQkDYxRZD-ZP8B4aRDuzsixQ1puiOslXq8MyWofxjON_Yhn2iaM-DN12-a_md1eAGa2EM8AP7cRwE-vVLy41x7iEDc12uauw5oOV7dIlZTgdbjFqv_KhZY6iMFjXB8WRwxMmm2Tp9hDnf__3z43rAxsRJ46NWh0WETL0MaAoxZvKdp9bZwLSuwFgzjC5opBVmbNyshmRZW8ttOZI41Pv2_BmlzdTu27I_7OPGamM&quot;);
-              "
-            ></div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-            >
-              <span class="font-label-sm text-surface-container-highest mb-2"
-                >ML / SPORTS</span
-              >
-              <h3 class="font-headline-md text-white">
-                Premier League Predictor
-              </h3>
-              <p class="text-surface-container-highest text-sm mt-2">
-                Historical data scraping and XGBoost implementation for match
-                outcome probability.
+            <div class="h-48 relative">
+              <div
+                class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                data-alt="A minimalist architectural shot of a sports stadium from an overhead perspective, stylized with a muted color palette of sage and warm white. Transparent data layers with graph lines in burnished copper are subtly overlaid on the pitch. The atmosphere is calm, precise, and professional."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuARTZFJE0KHdzugG-8r140oeEXOjr-vngy4ARfiwSy8iDj5QA-8J3PJqQGd7N7xHLLNBRXIZ3Mzb08JjFCFkOJ0CdaOiTgQIdMwvoLALoooIqm8xBSSonQ5P6my_JASHAu0FjPaccDi4CpxQIU0p38TU-NZdvGDH1lEQ63HkknBiB3UEK5AkUNvdBHkoTxBUiokAaWtsYLCDqMzSybr8HhgVElxJypi3OFjwRQ1--8NiIc0Euzf828qU51_2gHwyEDkUH7V8TK7ajA&quot;);
+                "
+              ></div>
+              <div class="absolute top-md right-md flex gap-xs">
+                <span
+                  class="px-sm py-xs bg-black/10 backdrop-blur-md rounded text-[10px] font-label-md text-white"
+                  >XGBoost</span
+                >
+              </div>
+            </div>
+            <div class="p-lg">
+              <h4 class="font-headline-md text-headline-md mb-xs">
+                Premier Predictor
+              </h4>
+              <p class="text-on-surface-variant text-body-md mb-md">
+                Sistema de predicción de resultados deportivos basado en Big
+                Data.
               </p>
+              <div class="flex gap-sm">
+                <span class="material-symbols-outlined text-tertiary"
+                  >sports_soccer</span
+                >
+                <span class="material-symbols-outlined text-tertiary"
+                  >bar_chart</span
+                >
+              </div>
             </div>
           </div>
-          <!-- Project 3: Travel Agency -->
+          <!-- Proy 3 -->
           <div
-            class="md:col-span-4 group relative overflow-hidden technical-border h-[400px]"
+            class="bg-surface rounded-2xl overflow-hidden nordic-border group"
           >
-            <div
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="A minimalist web application for a travel agency, showcasing a sleek booking flow with oversized typography and high-resolution travel photography of Peruvian landscapes. The layout is structured on a rigid grid with plenty of negative space and thin charcoal lines."
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA_HuPzDGXcqwNA-ede-72l4zGPtWaFj6pXiPL5aICAUFU-yn4g6MgqJLSXJcrTAtBRQZjvq6UOrdEs4f-cIh0my5RWWbb9j7xhu3b9O2aOTg8AUQCjtrMRxMQaIbkO_HrroT4YaJEIh-KrL9SK-H3J8s3CAXT4wD6bnrDsc18TcTqLriBJaFua89CeoTKguy9RshOSVuExIv5JY5k-kuYcKc8IJXWZqz9Fk-ZWWh8NyoYS1byg2cbNJ4W08ef8N0TWZ-5j_SlrBFg&quot;);
-              "
-            ></div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-            >
-              <span class="font-label-sm text-surface-container-highest mb-2"
-                >FULL STACK / UX</span
-              >
-              <h3 class="font-headline-md text-white">Nomad Travel Platform</h3>
+            <div class="h-48 relative">
+              <div
+                class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                data-alt="An editorial travel photography shot of a minimalist boutique hotel in a snowy landscape. The image uses a high-key lighting style with soft Nordic Sage shadows. A subtle UI element showing a reservation flow is integrated as if it were part of the architectural design. Premium and serene mood."
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD8OKxRPXWvowBsScFHWzqKo0wtS49SNVXCZSJgStb9WjnRn4un_smRcRzJwSZ4GMtPKOEOVuPIVSnpfqAs7mBxF9Ico2Bdx5llcPRpb3vNd2aQMuAmOxC39B7D9cmpp3rcQJdS_EGl1gIEe9O-34RGxspUah0Lqkx24zUITbLFEICwZUhfaGxdcwTfTz4K_MsDCwtqZPHkpL1lSYPXgN5L6GgWBzQwgORJpKzvNc_iJGscQtmbZ_CeyoT4BkMgPdsj5AxV6j_QZeY&quot;);
+                "
+              ></div>
+              <div class="absolute top-md right-md flex gap-xs">
+                <span
+                  class="px-sm py-xs bg-black/10 backdrop-blur-md rounded text-[10px] font-label-md text-white"
+                  >Stripe</span
+                >
+              </div>
             </div>
-          </div>
-          <!-- Project 4: Kaggle Analytics -->
-          <div
-            class="md:col-span-4 group relative overflow-hidden technical-border h-[400px]"
-          >
-            <div
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="Abstract visualization of data clusters and neural nodes. The aesthetic is purely mathematical and technical, featuring thousands of fine white points against a deep obsidian background with subtle sage green accents. It resembles a complex computational graph from a scientific manuscript."
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDwmD7hdfUZlahwEgsGZgBX1JoZWAfp1FeUV90qdVTG8MltSFEusGFM3AYn-6kS3mLsoR1dwRPKX6R8oMUkrH_-kVbGpz6HEIraHLglzUDsBYVzIMi-Mfjy40oQ4gdowPDoY8foRYS6D31iMi_xdpemhGnLowCQsADDw08z748j04PURq2XY-x-DBg4GKadAgqv5etGsfNGt3fYN-FtRA0nZPUEO4At29FBhRrTDORv_2A-74IDbyEYCPhP9zgTRC_b4U_POVQ-Ozo&quot;);
-              "
-            ></div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-            >
-              <span class="font-label-sm text-surface-container-highest mb-2"
-                >DATA SCIENCE</span
-              >
-              <h3 class="font-headline-md text-white">Kaggle Analytics</h3>
-            </div>
-          </div>
-          <!-- Project 5: Portfolio -->
-          <div
-            class="md:col-span-4 group relative overflow-hidden technical-border h-[400px]"
-          >
-            <div
-              class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="Close up detail of high-quality typography on a technical report. The shot focuses on the texture of thick, matte white paper and the precise, ink-heavy black printing of monospace fonts and grid lines. The lighting is bright and architectural."
-              style="
-                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB8NI2YdUA3sJ1J16j6DbPVnseACubjK9Aezd2bkp6O5fJYF0uVK6R5DRGii3RAi7gvhr0vuMm7K-fOxX_UpQRswCgMSPT_0Bifl7-l3kjaVEewMh4aX9-kW5VlhLTcRAIyE_5pb7nb-gT2LeCtC9htkP9nCvcnr-uwZRzBO4qF0OGshlaTbcJ8C6mSctSYK44un4XtuqOlplYPCHWY-LOIfI0lNz8d28BAtmj4zPyfaQl2Pt3KiMbsV6nUz_PszAQP59zeSmNsUo0&quot;);
-              "
-            ></div>
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"
-            >
-              <span class="font-label-sm text-surface-container-highest mb-2"
-                >DESIGN SYSTEM</span
-              >
-              <h3 class="font-headline-md text-white">System v3 Portfolio</h3>
+            <div class="p-lg">
+              <h4 class="font-headline-md text-headline-md mb-xs">
+                Viajes Premium
+              </h4>
+              <p class="text-on-surface-variant text-body-md mb-md">
+                Platforma E-commerce de lujo con integración de pagos y Redis.
+              </p>
+              <div class="flex gap-sm">
+                <span class="material-symbols-outlined text-tertiary"
+                  >payments</span
+                >
+                <span class="material-symbols-outlined text-tertiary"
+                  >bolt</span
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -947,85 +602,92 @@ void main() {
     </main>
     <!-- Footer -->
     <footer
-      class="bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant w-full py-12"
+      class="w-full bg-surface-container py-xxl border-t border-outline-variant"
     >
       <div
-        class="flex flex-col md:flex-row justify-between items-center px-margin-page max-w-container-max mx-auto gap-gutter"
+        class="flex flex-col md:flex-row justify-between items-start max-w-[1200px] mx-auto px-margin-desktop gap-lg"
       >
-        <div class="text-label-sm font-code-md text-primary">
-          D.MORALES // SYSTEMS
+        <div class="space-y-md">
+          <span class="font-headline-md text-headline-md text-on-surface"
+            >Denilson Morales</span
+          >
+          <p class="text-on-surface-variant font-body-md max-w-xs">
+            Diseñando el futuro de la web y la inteligencia artificial con
+            precisión escandinava.
+          </p>
         </div>
-        <div class="flex gap-8">
-          <a
-            class="font-label-sm text-label-sm uppercase tracking-widest text-outline hover:text-primary transition-colors duration-200"
-            href="#"
-            >GitHub</a
-          >
-          <a
-            class="font-label-sm text-label-sm uppercase tracking-widest text-outline hover:text-primary transition-colors duration-200"
-            href="#"
-            >LinkedIn</a
-          >
-          <a
-            class="font-label-sm text-label-sm uppercase tracking-widest text-outline hover:text-primary transition-colors duration-200"
-            href="#"
-            >Twitter</a
-          >
+        <div class="grid grid-cols-2 gap-xl">
+          <div class="flex flex-col gap-sm">
+            <span class="font-label-md text-label-md text-tertiary uppercase"
+              >Social</span
+            >
+            <a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors"
+              href="#"
+              >GitHub</a
+            >
+            <a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors"
+              href="#"
+              >Twitter</a
+            >
+          </div>
+          <div class="flex flex-col gap-sm">
+            <span class="font-label-md text-label-md text-tertiary uppercase"
+              >Info</span
+            >
+            <a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors"
+              href="#"
+              >Scholar</a
+            >
+            <a
+              class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors"
+              href="#"
+              >Privacy</a
+            >
+          </div>
         </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto px-margin-desktop mt-xl pt-lg border-t border-outline-variant/30 text-center md:text-left"
+      >
         <p
-          class="font-label-sm text-label-sm uppercase tracking-widest text-outline"
+          class="font-label-md text-label-md text-on-surface-variant opacity-60"
         >
-          © 2024 Denilson Morales. System Status:
-          <span class="text-emerald-600">Operational.</span>
+          © 2024 Portfolio. Crafted with Precision.
         </p>
       </div>
     </footer>
     <script>
-      // Parallax effect for avatar
-      document.addEventListener("mousemove", (e) => {
-        const frame = document.getElementById("avatar-frame");
-        if (!frame) return;
-        const x = (window.innerWidth / 2 - e.pageX) / 50;
-        const y = (window.innerHeight / 2 - e.pageY) / 50;
-        frame.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-      });
-
-      // ML Simulator interaction
-      const runBtn = document.getElementById("run-prediction");
-      const output = document.getElementById("prediction-output");
-
-      runBtn.addEventListener("click", () => {
-        runBtn.innerHTML =
-          '<span class="material-symbols-outlined text-sm animate-spin">sync</span> Running...';
-        runBtn.disabled = true;
-
-        setTimeout(() => {
-          output.classList.remove("hidden");
-          runBtn.innerHTML =
-            '<span class="material-symbols-outlined text-sm">play_arrow</span> Run Prediction';
-          runBtn.disabled = false;
-        }, 1200);
-      });
-
-      // Smooth reveal on scroll
-      const observerOptions = {
-        threshold: 0.1,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
+      // Simple Interaction logic for ML Widget
+      document
+        .querySelector("button.satin-copper")
+        .addEventListener("mousedown", function () {
+          this.style.transform = "scale(0.98)";
         });
-      }, observerOptions);
+      document
+        .querySelector("button.satin-copper")
+        .addEventListener("mouseup", function () {
+          this.style.transform = "scale(1)";
+        });
 
-      document.querySelectorAll("section").forEach((section) => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(20px)";
-        section.style.transition = "all 0.6s ease-out";
-        observer.observe(section);
+      // Interaction for Navigation
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          navLinks.forEach((l) => {
+            l.classList.remove("text-primary", "border-b-2", "border-tertiary");
+            l.classList.add("text-on-surface-variant");
+          });
+          link.classList.add("text-primary", "border-b-2", "border-tertiary");
+          link.classList.remove("text-on-surface-variant");
+        });
       });
     </script>
   </body>
